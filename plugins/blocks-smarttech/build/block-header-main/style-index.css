@@ -6,7 +6,7 @@
   position: absolute;
   width: calc(100% - 60px);
   z-index: 10;
-  font-weight: 300;
+  font-weight: 400;
   background-color: transparent;
 }
 .st-header__container {
@@ -19,14 +19,15 @@
   height: 100%;
   border: none !important;
   font-family: "Atyp Display", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 .st-header__logo {
   flex-shrink: 0;
   margin-right: auto;
 }
 .st-header__logo img {
-  height: 23px;
+  height: 2.3rem;
   width: auto;
   display: block;
 }
@@ -50,7 +51,7 @@
 .st-header__menu-list li a {
   color: inherit;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
   transition: opacity 0.3s ease;
   display: inline-block;
@@ -87,21 +88,21 @@
   transform: translateY(-100%);
 }
 .st-header__lang {
-  border: 1px solid currentColor;
+  border: 2px solid currentColor;
   border-radius: 30px;
   margin-right: 20px;
   padding: 4px 13px;
   display: flex;
 }
 .st-header__lang:hover {
-  border: 1px solid currentColor;
+  border: 2px solid currentColor;
   color: inherit;
 }
 .st-header__phone:hover {
   color: inherit;
 }
 .st-header__phone, .st-header__lang {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: inherit;
   text-decoration: none;
   white-space: nowrap;
