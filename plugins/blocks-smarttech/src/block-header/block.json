@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-smarttech/block-header",
+	"version": "0.1.0",
+	"title": "Block Header",
+	"category": "smarttech",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"logoUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"logoUrlDark": {
+			"type": "string",
+			"default": ""
+		},
+		"phoneNumber": {
+			"type": "string",
+			"default": "+7 (931) 111-95-03"
+		},
+		"languageText": {
+			"type": "string",
+			"default": "EN"
+		},
+		"languageUrl": {
+			"type": "string",
+			"default": "#popup:infoblock"
+		},
+		"headerStyle": {
+			"type": "string",
+			"default": "overlay"
+		},
+		"menuItems": {
+			"type": "array",
+			"default": [
+				{ "label": "Компания", "url": "/o-kompanii" },
+				{ "label": "Услуги", "url": "#submenu:more-uslugi-kompanii" },
+				{ "label": "Проекты", "url": "#submenu:more-lokacii" },
+				{ "label": "Портфолио", "url": "/portfolio" },
+				{ "label": "Блог", "url": "/blog" }
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

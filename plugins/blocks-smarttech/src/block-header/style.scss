@@ -1,0 +1,175 @@
+// Переменные
+$font-family: "A", Arial, sans-serif;
+$font-size: 12px;
+$transition: 0.3s ease;
+
+.st-header {
+	position: relative;
+	width: 100%;
+	z-index: 10;
+	font-family: $font-family;
+	font-weight: 300;
+	transition: background-color $transition;
+
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__logo {
+		flex-shrink: 0;
+		margin-right: auto;
+		img {
+			height: 23px;
+			width: auto;
+			display: block;
+		}
+		&-placeholder {
+			font-size: 18px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+	}
+
+	&__menu {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		&-list {
+			display: flex;
+			gap: 30px;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li a {
+				color: inherit;
+				text-decoration: none;
+				font-size: $font-size;
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				transition: opacity $transition;
+				display: inline-block;
+				&:hover {
+					opacity: 0.7;
+				}
+				.letter {
+					display: inline-block;
+					opacity: 0;
+					transform: translateY(10px);
+					animation: fadeInUp 0.4s ease forwards;
+				}
+				// Задержки для каждой буквы генерируются в цикле
+				@for $i from 1 through 30 {
+					.letter:nth-child(#{$i}) {
+						animation-delay: #{$i * 0.03}s;
+					}
+				}
+			}
+		}
+	}
+
+	&__phone,
+	&__lang {
+		font-size: $font-size;
+		color: inherit;
+		text-decoration: none;
+		white-space: nowrap;
+		margin-left: 20px;
+		.letter {
+			display: inline-block;
+			opacity: 0;
+			transform: translateY(10px);
+			animation: fadeInUp 0.4s ease forwards;
+		}
+		@for $i from 1 through 30 {
+			.letter:nth-child(#{$i}) {
+				animation-delay: #{$i * 0.03}s;
+			}
+		}
+	}
+
+	&__burger {
+		display: none; // Показываем только на мобильных
+		background: none;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+		margin-left: 20px;
+		span {
+			display: block;
+			width: 26px;
+			height: 1px;
+			background-color: currentColor;
+			margin: 5px 0;
+			transition: transform $transition;
+		}
+	}
+
+	// Стиль overlay
+	&--overlay {
+		height: 0;
+		.st-header__container {
+			height: 0;
+			position: relative;
+			align-items: flex-end; // Чтобы элементы не сжимались
+			padding-bottom: 10px; // Визуальный отступ
+		}
+	}
+
+	// Стиль solid
+	&--solid {
+		height: 50px;
+		.st-header__container {
+			height: 50px;
+		}
+	}
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+// Адаптивность
+@media screen and (max-width: 1199px) {
+	.st-header {
+		&__menu {
+			display: none;
+		}
+		&__burger {
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&__phone,
+		&__lang {
+			margin-right: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: 639px) {
+	.st-header {
+		&__container {
+			padding: 0 10px;
+		}
+		&__burger {
+			right: 10px;
+		}
+		&__phone {
+			display: none; // На самом маленьком экране можно убрать телефон
+		}
+		&__lang {
+			margin-right: 50px;
+		}
+	}
+}

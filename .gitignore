@@ -1,0 +1,5 @@
+/.srv/*
+!/.srv/.custom.ini
+/themes/*
+!/themes/smarttech
+docker-compose.yml

@@ -1,0 +1,177 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-header-main/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.st-header {
+  position: absolute;
+  width: calc(100% - 60px);
+  z-index: 10;
+  font-weight: 300;
+  background-color: transparent;
+}
+.st-header__container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 13px 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: none !important;
+  font-family: "Atyp Display", Arial, sans-serif;
+  font-size: 12px;
+}
+.st-header__logo {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.st-header__logo img {
+  height: 23px;
+  width: auto;
+  display: block;
+}
+.st-header__logo-placeholder {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.st-header__menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.st-header__menu-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.st-header__menu-list li a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+  display: inline-block;
+}
+.st-header__menu-list li a:hover {
+  opacity: 1;
+}
+.st-header {
+  /* ============ АНИМАЦИЯ LETTERBYLETTER ============ */
+}
+.st-header .letterbyletter {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 1.15em;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+.st-header .letterbyletter .block {
+  display: block;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  transition: color 0.3s;
+}
+.st-header .letterbyletter .block-last {
+  color: var(--color-animated-text);
+}
+.st-header .letterbyletter .letter {
+  display: inline-block;
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.st-header .letterbyletter:hover .letter, .st-header .letterbyletter.play .letter {
+  transform: translateY(-100%);
+}
+.st-header__lang {
+  border: 1px solid currentColor;
+  border-radius: 30px;
+  margin-left: 20px;
+  padding: 4px 13px;
+  display: flex;
+}
+.st-header__lang:hover {
+  border: 1px solid currentColor;
+  color: inherit;
+}
+.st-header__phone:hover {
+  color: inherit;
+}
+.st-header__phone, .st-header__lang {
+  font-size: 12px;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+.st-header__burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.st-header__burger span {
+  display: block;
+  width: 26px;
+  height: 1px;
+  background-color: currentColor;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
+}
+.st-header--solid {
+  height: 50px;
+}
+.st-header--solid .st-header__container {
+  height: 50px;
+}
+@media screen and (max-width: 1199px) {
+  .st-header__menu {
+    display: none;
+  }
+  .st-header__burger {
+    display: block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .st-header__phone, .st-header__lang {
+    margin-left: 60px;
+  }
+  .st-header .letterbyletter {
+    overflow: visible;
+    height: auto;
+  }
+  .st-header .letterbyletter .block {
+    display: inline;
+    color: inherit;
+  }
+  .st-header .letterbyletter .block-last {
+    display: none;
+  }
+  .st-header .letterbyletter .letter {
+    transition: none;
+  }
+  .st-header .letterbyletter:hover {
+    color: var(--color-animated-text);
+  }
+}
+@media screen and (max-width: 639px) {
+  .st-header__container {
+    padding: 0 10px;
+  }
+  .st-header__burger {
+    left: 10px;
+  }
+  .st-header__phone {
+    display: none;
+  }
+  .st-header__lang {
+    margin-left: 50px;
+  }
+}
