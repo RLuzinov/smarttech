@@ -1,9 +1,206 @@
-/**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
- */
+// Переменные
+$font-family: "Atyp Display", Arial, sans-serif;
+$font-size: 1.2rem;
+$transition: 0.3s ease;
 
-.wp-block-create-block-blocks-smarttech {
-	border: 1px dotted #f00;
+.st-header {
+	position: absolute;
+	width: calc(100% - 60px);
+	z-index: 10;
+	font-weight: 400;
+	background-color: transparent;
+
+	&__container {
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 13px 30px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		border: none !important;
+		font-family: $font-family;
+		font-size: $font-size;
+		font-weight: 400;
+	}
+
+	&__logo {
+		flex-shrink: 0;
+		margin-right: auto;
+		img {
+			height: 2.3rem;
+			width: auto;
+			display: block;
+		}
+		&-placeholder {
+			font-size: 18px;
+			font-weight: 600;
+			letter-spacing: 1px;
+		}
+	}
+
+	&__menu {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		&-list {
+			display: flex;
+			gap: 30px;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li a {
+				color: inherit;
+				text-decoration: none;
+				font-size: $font-size;
+				letter-spacing: 0.5px;
+				transition: opacity $transition;
+				display: inline-block;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	/* ============ АНИМАЦИЯ LETTERBYLETTER ============ */
+	.letterbyletter {
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: middle;
+		height: 1.15em; // подберите по своему line-height
+		line-height: 1.15;
+		white-space: nowrap;
+
+		.block {
+			display: block;
+			margin: 0;
+			padding: 0;
+			color: inherit;
+			transition: color 0.3s;
+		}
+
+		.block-last {
+			color: var(
+				--color-animated-text
+			); // зелёный цвет, появляющийся при наведении
+		}
+
+		.letter {
+			display: inline-block;
+			transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+			// задержки будут установлены инлайново через JS, но можно продублировать в CSS:
+			// transition-delay будет переопределён, поэтому это не обязательно.
+		}
+
+		// При наведении (или добавлении класса .play) сдвигаем все буквы вверх
+		&:hover .letter,
+		&.play .letter {
+			transform: translateY(-100%);
+		}
+	}
+
+	&__lang {
+		border: 2px solid currentColor;
+		border-radius: 30px;
+		margin-right: 20px;
+		padding: 4px 13px;
+		display: flex;
+	}
+
+	&__lang:hover {
+		border: 2px solid currentColor;
+		color: inherit;
+	}
+	&__phone:hover {
+		color: inherit;
+	}
+	&__phone,
+	&__lang {
+		font-size: $font-size;
+		color: inherit;
+		text-decoration: none;
+		white-space: nowrap;
+		margin-left: 20px;
+	}
+
+	&__burger {
+		display: none;
+		background: none;
+		border: none;
+		padding: 10px;
+		cursor: pointer;
+		margin-left: 20px;
+		span {
+			display: block;
+			width: 26px;
+			height: 1px;
+			background-color: currentColor;
+			margin: 5px 0;
+			transition: transform $transition;
+		}
+	}
+
+	// Стиль solid (опционально)
+	&--solid {
+		height: 50px;
+		.st-header__container {
+			height: 50px;
+		}
+	}
+}
+
+// Адаптивность
+@media screen and (max-width: 1199px) {
+	.st-header {
+		&__menu {
+			display: none;
+		}
+		&__burger {
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&__phone,
+		&__lang {
+			margin-right: 60px;
+		}
+		// Отключаем анимацию letter-by-letter на мобильных
+		.letterbyletter {
+			overflow: visible;
+			height: auto;
+			.block {
+				display: inline;
+				color: inherit;
+			}
+			.block-last {
+				display: none;
+			}
+			.letter {
+				transition: none;
+			}
+			&:hover {
+				color: var(--color-animated-text);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 639px) {
+	.st-header {
+		&__container {
+			padding: 0 10px;
+		}
+		&__burger {
+			right: 10px;
+		}
+		&__phone {
+			display: none;
+		}
+		&__lang {
+			margin-right: 50px;
+		}
+	}
 }
