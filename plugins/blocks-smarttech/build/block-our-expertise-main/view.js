@@ -1,14 +1,14 @@
 /******/ (() => { // webpackBootstrap
-/*!*************************************!*\
-  !*** ./src/block-hero-main/view.js ***!
-  \*************************************/
-function initHeroScale() {
-  const scalers = document.querySelectorAll(".hero-scaler");
+/*!**********************************************!*\
+  !*** ./src/block-our-expertise-main/view.js ***!
+  \**********************************************/
+function initScale() {
+  const scalers = document.querySelectorAll(".expertise-scaler");
   if (!scalers.length) return;
   const DESIGN_WIDTH = 1200;
   function updateScale() {
     scalers.forEach(scaler => {
-      const parent = scaler.parentElement; // section.wp-block
+      const parent = scaler.parentElement;
       const windowWidth = parent.clientWidth;
       if (windowWidth <= 640) {
         scaler.style.zoom = "1";
@@ -22,9 +22,9 @@ function initHeroScale() {
   window.addEventListener("resize", updateScale);
 }
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initHeroScale);
+  document.addEventListener("DOMContentLoaded", initScale);
 } else {
-  initHeroScale();
+  initScale();
 }
 /******/ })()
 ;

@@ -60,8 +60,6 @@ function Edit({
       });
     }
   };
-
-  // Функция обновления пункта меню
   const updateMenuItem = (index, key, value) => {
     const newItems = menuItems.map((item, i) => i === index ? {
       ...item,
@@ -317,54 +315,56 @@ function save({
       overflow: isOverlay ? "visible" : "hidden"
     }
   });
-
-  // Функция для разбиения текста на буквы (анимация)
   const letterSpans = text => text.split("").map((char, i) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
     className: "letter",
     children: char === " " ? "\u00A0" : char
   }, i));
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     ...blockProps,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "st-header__container",
-      style: {
-        color: textColor
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-        className: "st-header__logo",
-        href: "/",
-        children: activeLogo ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: activeLogo,
-          alt: "Logo"
-        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-          className: "st-header__logo-placeholder",
-          children: "Logo"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("nav", {
-        className: "st-header__menu",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
-          className: "st-header__menu-list",
-          children: menuItems.map((item, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-              href: item.url,
-              children: letterSpans(item.label)
-            })
-          }, index))
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-        className: "st-header__lang",
-        href: languageUrl,
-        children: letterSpans(languageText)
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-        className: "st-header__phone",
-        href: `tel:${phoneNumber.replace(/[^0-9+]/g, "")}`,
-        children: letterSpans(phoneNumber)
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
-        className: "st-header__burger",
-        "aria-label": "Menu",
-        "data-action": "toggle-menu",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {})]
-      })]
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "header-scaler",
+      id: "header-scaler",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "st-header__container",
+        style: {
+          color: textColor
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          className: "st-header__logo",
+          href: "/",
+          children: activeLogo ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: activeLogo,
+            alt: "Logo"
+          }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            className: "st-header__logo-placeholder",
+            children: "Logo"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("nav", {
+          className: "st-header__menu",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("ul", {
+            className: "st-header__menu-list",
+            children: menuItems.map((item, index) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                href: item.url,
+                children: letterSpans(item.label)
+              })
+            }, index))
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          className: "st-header__lang",
+          href: languageUrl,
+          children: letterSpans(languageText)
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          className: "st-header__phone",
+          href: `tel:${phoneNumber.replace(/[^0-9+]/g, "")}`,
+          children: letterSpans(phoneNumber)
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+          className: "st-header__burger",
+          "aria-label": "Menu",
+          "data-action": "toggle-menu",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {})]
+        })]
+      })
     })
   });
 }
@@ -439,7 +439,7 @@ module.exports = window["wp"]["i18n"];
   \******************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-smarttech/block-header-main","version":"0.1.0","title":"Block Header fot main page","category":"smarttech","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"logoUrl":{"type":"string","default":""},"logoUrlDark":{"type":"string","default":""},"phoneNumber":{"type":"string","default":"+7 (931) 111 95 03"},"languageText":{"type":"string","default":"EN"},"languageUrl":{"type":"string","default":"#popup:infoblock"},"headerStyle":{"type":"string","default":"overlay"},"menuItems":{"type":"array","default":[{"label":"Компания","url":"/o-kompanii"},{"label":"Услуги","url":"#submenu:more-uslugi-kompanii"},{"label":"Проекты","url":"#submenu:more-lokacii"},{"label":"Портфолио","url":"/portfolio"},{"label":"Блог","url":"/blog"}]}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-smarttech/block-header-main","version":"0.1.0","title":"Block Header for Main page","category":"smarttech","icon":"smiley","description":"Header block with scale and letter‑by‑letter animation.","example":{},"supports":{"html":false},"attributes":{"logoUrl":{"type":"string","default":""},"logoUrlDark":{"type":"string","default":""},"phoneNumber":{"type":"string","default":"+7 (931) 111 95 03"},"languageText":{"type":"string","default":"EN"},"languageUrl":{"type":"string","default":"#popup:infoblock"},"headerStyle":{"type":"string","default":"overlay"},"menuItems":{"type":"array","default":[{"label":"Компания","url":"/o-kompanii"},{"label":"Услуги","url":"#submenu:more-uslugi-kompanii"},{"label":"Проекты","url":"#submenu:more-lokacii"},{"label":"Портфолио","url":"/portfolio"},{"label":"Блог","url":"/blog"}]}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 

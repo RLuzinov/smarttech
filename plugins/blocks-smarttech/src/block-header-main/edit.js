@@ -3,7 +3,6 @@ import {
 	useBlockProps,
 	InspectorControls,
 	MediaUpload,
-	RichText,
 } from "@wordpress/block-editor";
 import {
 	PanelBody,
@@ -45,7 +44,6 @@ export default function Edit({ attributes, setAttributes }) {
 		}
 	};
 
-	// Функция обновления пункта меню
 	const updateMenuItem = (index, key, value) => {
 		const newItems = menuItems.map((item, i) =>
 			i === index ? { ...item, [key]: value } : item,
@@ -77,9 +75,7 @@ export default function Edit({ attributes, setAttributes }) {
 						}
 						checked={!isOverlay}
 						onChange={(value) =>
-							setAttributes({
-								headerStyle: value ? "solid" : "overlay",
-							})
+							setAttributes({ headerStyle: value ? "solid" : "overlay" })
 						}
 					/>
 				</PanelBody>
@@ -153,7 +149,6 @@ export default function Edit({ attributes, setAttributes }) {
 					}`}
 					style={{ color: textColor }}
 				>
-					{/* Логотип */}
 					<a className="st-header__logo" href="/">
 						{activeLogo ? (
 							<img src={activeLogo} alt="Logo" />
@@ -161,18 +156,13 @@ export default function Edit({ attributes, setAttributes }) {
 							<span className="st-header__logo-placeholder">Logo</span>
 						)}
 					</a>
-
-					{/* Меню */}
 					<nav className="st-header__menu">
 						<ul className="st-header__menu-list">
 							{menuItems.map((item, index) => (
 								<li key={index}>
 									<a
 										href={item.url}
-										style={{
-											color: textColor,
-											textDecoration: "none",
-										}}
+										style={{ color: textColor, textDecoration: "none" }}
 									>
 										{item.label}
 									</a>
@@ -180,7 +170,6 @@ export default function Edit({ attributes, setAttributes }) {
 							))}
 						</ul>
 					</nav>
-					{/* Язык */}
 					<a
 						className="st-header__lang"
 						href={languageUrl}
@@ -188,8 +177,6 @@ export default function Edit({ attributes, setAttributes }) {
 					>
 						{languageText}
 					</a>
-
-					{/* Телефон */}
 					<a
 						className="st-header__phone"
 						href={`tel:${phoneNumber.replace(/[^0-9+]/g, "")}`}
@@ -197,8 +184,6 @@ export default function Edit({ attributes, setAttributes }) {
 					>
 						{phoneNumber}
 					</a>
-
-					{/* Гамбургер (мобильное меню) */}
 					<button
 						className="st-header__burger"
 						aria-label="Menu"

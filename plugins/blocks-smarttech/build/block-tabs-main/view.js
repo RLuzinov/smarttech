@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     const scale = Math.min(currentWidth / DESIGN_WIDTH, 1);
     scaler.style.transform = `scale(${scale})`;
-    parent.style.height = scaler.scrollHeight * scale + "px";
+    // parent.style.height = scaler.scrollHeight * scale + "px";
   }
   function updateImageScale() {
     const scaler = document.getElementById("profile-tabs-scaler");
