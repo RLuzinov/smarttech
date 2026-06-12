@@ -4,10 +4,17 @@
 @charset "UTF-8";
 .st-header {
   position: absolute;
-  width: calc(100% - 60px);
+  width: 100%;
   z-index: 10;
   font-weight: 400;
   background-color: transparent;
+  right: 0;
+  top: 0;
+}
+.header-scaler {
+  width: 1200px;
+  margin: 0 auto;
+  transform-origin: top center;
 }
 .st-header__container {
   max-width: 100%;
@@ -19,7 +26,7 @@
   height: 100%;
   border: none !important;
   font-family: "Atyp Display", Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 15px;
   font-weight: 400;
 }
 .st-header__logo {
@@ -27,7 +34,7 @@
   margin-left: auto;
 }
 .st-header__logo img {
-  height: 2.3rem;
+  height: 23px;
   width: auto;
   display: block;
 }
@@ -51,7 +58,7 @@
 .st-header__menu-list li a {
   color: inherit;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 15px;
   letter-spacing: 0.5px;
   transition: opacity 0.3s ease;
   display: inline-block;
@@ -59,10 +66,8 @@
 .st-header__menu-list li a:hover {
   opacity: 1;
 }
-.st-header {
-  /* ============ АНИМАЦИЯ LETTERBYLETTER ============ */
-}
-.st-header .letterbyletter {
+/* ============ АНИМАЦИЯ LETTERBYLETTER ============ */
+.letterbyletter {
   display: inline-block;
   overflow: hidden;
   vertical-align: middle;
@@ -70,21 +75,21 @@
   line-height: 1.15;
   white-space: nowrap;
 }
-.st-header .letterbyletter .block {
+.letterbyletter .block {
   display: block;
   margin: 0;
   padding: 0;
   color: inherit;
   transition: color 0.3s;
 }
-.st-header .letterbyletter .block-last {
+.letterbyletter .block-last {
   color: var(--color-animated-text);
 }
-.st-header .letterbyletter .letter {
+.letterbyletter .letter {
   display: inline-block;
   transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
-.st-header .letterbyletter:hover .letter, .st-header .letterbyletter.play .letter {
+.letterbyletter:hover .letter, .letterbyletter.play .letter {
   transform: translateY(-100%);
 }
 .st-header__lang {
@@ -101,8 +106,9 @@
 .st-header__phone:hover {
   color: inherit;
 }
-.st-header__phone, .st-header__lang {
-  font-size: 1.2rem;
+.st-header__phone,
+.st-header__lang {
+  font-size: 15px;
   color: inherit;
   text-decoration: none;
   white-space: nowrap;
@@ -131,6 +137,9 @@
   height: 50px;
 }
 @media screen and (max-width: 1199px) {
+  .header-scaler {
+    width: 100%;
+  }
   .st-header__menu {
     display: none;
   }
@@ -141,24 +150,25 @@
     top: 50%;
     transform: translateY(-50%);
   }
-  .st-header__phone, .st-header__lang {
+  .st-header__phone,
+  .st-header__lang {
     margin-left: 60px;
   }
-  .st-header .letterbyletter {
+  .letterbyletter {
     overflow: visible;
     height: auto;
   }
-  .st-header .letterbyletter .block {
+  .letterbyletter .block {
     display: inline;
     color: inherit;
   }
-  .st-header .letterbyletter .block-last {
+  .letterbyletter .block-last {
     display: none;
   }
-  .st-header .letterbyletter .letter {
+  .letterbyletter .letter {
     transition: none;
   }
-  .st-header .letterbyletter:hover {
+  .letterbyletter:hover {
     color: var(--color-animated-text);
   }
 }

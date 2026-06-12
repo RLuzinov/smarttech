@@ -222,42 +222,46 @@ function save({
     buttonUrl
   } = attributes;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save();
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("section", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
     ...blockProps,
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "hero-main-media-container",
-      children: videoUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("video", {
-        className: "hero-main-video",
-        loop: true,
-        autoPlay: true,
-        muted: true,
-        playsInline: true,
-        width: "100%",
-        height: "100%",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("source", {
-          src: videoUrl,
-          type: "video/mp4"
-        })
-      }) : imageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-        className: "hero-main-image",
-        src: imageUrl,
-        alt: "",
-        style: {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "hero-scaler",
+      id: "hero-scaler",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "hero-main-media-container",
+        children: videoUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("video", {
+          className: "hero-main-video",
+          loop: true,
+          autoPlay: true,
+          muted: true,
+          playsInline: true,
           width: "100%",
           height: "100%",
-          objectFit: "cover"
-        }
-      }) : null
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "hero-main-text-container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-        children: title
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-        href: buttonUrl,
-        className: "btn",
-        children: buttonText
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("source", {
+            src: videoUrl,
+            type: "video/mp4"
+          })
+        }) : imageUrl ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          className: "hero-main-image",
+          src: imageUrl,
+          alt: "",
+          style: {
+            width: "100%",
+            height: "100%",
+            objectFit: "cover"
+          }
+        }) : null
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "hero-main-text-container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+          children: title
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          href: buttonUrl,
+          className: "btn",
+          children: buttonText
+        })]
       })]
-    })]
+    })
   });
 }
 

@@ -3,10 +3,10 @@
   "apiVersion": 3,
   "name": "blocks-smarttech/block-header-main",
   "version": "0.1.0",
-  "title": "Block Header fot main page",
+  "title": "Block Header for Main page",
   "category": "smarttech",
   "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "description": "Header block with scale and letter‑by‑letter animation.",
   "example": {},
   "supports": {
     "html": false

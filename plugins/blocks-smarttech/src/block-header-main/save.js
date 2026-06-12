@@ -26,7 +26,6 @@ export default function save({ attributes }) {
 		},
 	});
 
-	// Функция для разбиения текста на буквы (анимация)
 	const letterSpans = (text) =>
 		text.split("").map((char, i) => (
 			<span className="letter" key={i}>
@@ -36,49 +35,43 @@ export default function save({ attributes }) {
 
 	return (
 		<div {...blockProps}>
-			<div className="st-header__container" style={{ color: textColor }}>
-				{/* Логотип */}
-				<a className="st-header__logo" href="/">
-					{activeLogo ? (
-						<img src={activeLogo} alt="Logo" />
-					) : (
-						<span className="st-header__logo-placeholder">Logo</span>
-					)}
-				</a>
-
-				{/* Меню */}
-				<nav className="st-header__menu">
-					<ul className="st-header__menu-list">
-						{menuItems.map((item, index) => (
-							<li key={index}>
-								<a href={item.url}>{letterSpans(item.label)}</a>
-							</li>
-						))}
-					</ul>
-				</nav>
-				{/* Язык */}
-				<a className="st-header__lang" href={languageUrl}>
-					{letterSpans(languageText)}
-				</a>
-
-				{/* Телефон */}
-				<a
-					className="st-header__phone"
-					href={`tel:${phoneNumber.replace(/[^0-9+]/g, "")}`}
-				>
-					{letterSpans(phoneNumber)}
-				</a>
-
-				{/* Гамбургер */}
-				<button
-					className="st-header__burger"
-					aria-label="Menu"
-					data-action="toggle-menu"
-				>
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+			<div className="header-scaler" id="header-scaler">
+				<div className="st-header__container" style={{ color: textColor }}>
+					<a className="st-header__logo" href="/">
+						{activeLogo ? (
+							<img src={activeLogo} alt="Logo" />
+						) : (
+							<span className="st-header__logo-placeholder">Logo</span>
+						)}
+					</a>
+					<nav className="st-header__menu">
+						<ul className="st-header__menu-list">
+							{menuItems.map((item, index) => (
+								<li key={index}>
+									<a href={item.url}>{letterSpans(item.label)}</a>
+								</li>
+							))}
+						</ul>
+					</nav>
+					<a className="st-header__lang" href={languageUrl}>
+						{letterSpans(languageText)}
+					</a>
+					<a
+						className="st-header__phone"
+						href={`tel:${phoneNumber.replace(/[^0-9+]/g, "")}`}
+					>
+						{letterSpans(phoneNumber)}
+					</a>
+					<button
+						className="st-header__burger"
+						aria-label="Menu"
+						data-action="toggle-menu"
+					>
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
 			</div>
 		</div>
 	);
