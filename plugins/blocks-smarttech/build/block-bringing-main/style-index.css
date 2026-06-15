@@ -1,0 +1,232 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-bringing-main/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.wp-block-blocks-smarttech-block-bringing-main {
+  margin-block-start: 0 !important;
+  overflow: hidden;
+  margin-top: 0 !important;
+}
+.projects-scaler {
+  width: 1200px;
+  margin: 0 auto;
+  transform-origin: top center;
+  background: var(--main-background);
+}
+.projects-block {
+  padding: 80px 30px;
+  font-family: "Atyp Display", Arial, sans-serif;
+  color: #252525;
+  position: relative;
+  min-height: 532px;
+  overflow: hidden;
+}
+/* Декоративные линии */
+.projects__line {
+  position: absolute;
+  height: 1px;
+  background-color: #252525;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: left center;
+}
+.projects__line--top {
+  top: 1px;
+}
+.projects__line--title {
+  top: 190px;
+  left: 300px;
+  width: 610px;
+}
+.projects__line--bottom {
+  top: 341px;
+  left: 300px;
+  width: 610px;
+}
+.projects-block.animated .projects__line {
+  transform: scaleX(1);
+}
+.projects__vertical-line {
+  position: absolute;
+  width: 1px;
+  background-color: #252525;
+  top: 0;
+  transform: scaleY(0);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: top center;
+}
+.projects__vertical-line--left {
+  left: 600px;
+  height: 190px;
+  top: 2px;
+}
+.projects__vertical-line--right {
+  left: 600px;
+  height: 190px;
+  top: 341px;
+}
+.projects-block.animated .projects__vertical-line {
+  transform: scaleY(1);
+}
+/* Заголовок и описание */
+.projects__title {
+  font-size: 70px;
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -1px;
+  color: #252525;
+  margin: 110px 0 0 300px;
+  max-width: 707px;
+  position: relative;
+  z-index: 2;
+}
+.projects__description {
+  font-size: 16px;
+  line-height: 1.25;
+  color: #252525;
+  margin: 88px 0 20px 630px;
+  max-width: 334px;
+  position: relative;
+  z-index: 2;
+}
+/* Сетка из 7 колонок */
+.projects__cards-row {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+  max-height: 591px;
+  border-top: 1px solid #252525;
+}
+.projects__card {
+  flex: 1;
+  max-width: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.projects__card-inner {
+  will-change: transform;
+}
+.projects__card-set {
+  display: flex;
+  flex-direction: column;
+}
+.projects__card-image {
+  width: 100%;
+  height: 220px; /* минимальная высота картинки */
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin-bottom: 13px;
+}
+/* === АНИМАЦИЯ НА CSS-ПЕРЕМЕННЫХ === */
+.projects__card--odd .projects__card-inner {
+  animation: scroll-up var(--scroll-speed, 20s) linear infinite;
+}
+.projects__card--even .projects__card-inner {
+  animation: scroll-down var(--scroll-speed, 20s) linear infinite;
+}
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-1 * var(--set-height)));
+  }
+}
+@keyframes scroll-down {
+  0% {
+    transform: translateY(calc(-1 * var(--set-height)));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Адаптив */
+@media (max-width: 1199px) {
+  .projects-scaler {
+    width: 100%;
+  }
+  .projects-block {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+  .projects__title {
+    font-size: 66px;
+    margin-left: 22px;
+    max-width: 610px;
+  }
+  .projects__description {
+    margin-left: 341px;
+  }
+  .projects__line--title,
+  .projects__line--bottom {
+    left: 15px;
+    width: auto;
+  }
+  .projects__vertical-line--left,
+  .projects__vertical-line--right {
+    left: 320px;
+  }
+  .projects__cards-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 639px) {
+  .projects-block {
+    padding: 0;
+  }
+  .projects__title {
+    font-size: 30px;
+    margin-left: 10px;
+    line-height: 1.1;
+    max-width: 276px;
+    margin-top: 130px;
+    padding: 30px 15px;
+  }
+  .projects__description {
+    font-size: 14px;
+    margin-left: 56px;
+    max-width: 232px;
+    margin-top: 10px;
+  }
+  .projects__line--title {
+    top: 143px;
+  }
+  .projects__line--bottom {
+    top: 251px;
+  }
+  .projects__line--title,
+  .projects__line--bottom {
+    left: 0;
+    width: 320px;
+  }
+  .projects__vertical-line--right {
+    top: 251px;
+  }
+  .projects__vertical-line--left,
+  .projects__vertical-line--right {
+    left: 41px;
+    height: 140px !important;
+  }
+  .projects__cards-row {
+    flex-direction: column;
+    max-height: 396px;
+    gap: 3px;
+  }
+  .projects__card {
+    max-width: 100%;
+    margin-bottom: 3px;
+  }
+  .projects__card-image {
+    width: 78px;
+    height: 106px;
+    margin-bottom: 3px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

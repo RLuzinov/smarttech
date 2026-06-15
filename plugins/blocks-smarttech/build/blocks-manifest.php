@@ -137,6 +137,75 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-bringing-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-bringing-main',
+		'version' => '0.1.0',
+		'title' => 'Block bringing for main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Block width tabs fot main page',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Выводим на рынок знаковые проекты'
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Мы реализовали сотни крутых идей и объектов в разных уголках страны, от концепции, проектирования до строительства и продажи последнего квадратного метра'
+			),
+			'columns' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'images' => array(
+							
+						)
+					),
+					array(
+						'images' => array(
+							
+						)
+					),
+					array(
+						'images' => array(
+							
+						)
+					),
+					array(
+						'images' => array(
+							
+						)
+					),
+					array(
+						'images' => array(
+							
+						)
+					),
+					array(
+						'images' => array(
+							
+						)
+					),
+					array(
+						'images' => array(
+							
+						)
+					)
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-header' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
