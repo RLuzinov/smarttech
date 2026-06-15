@@ -38,6 +38,7 @@ function create_block_blocks_smarttech_block_init() {
 	register_block_type(__DIR__ . '/build/block-header-main');
 	register_block_type(__DIR__ . '/build/block-tabs-main');
 	register_block_type(__DIR__ . '/build/block-our-expertise-main');
+	register_block_type(__DIR__ . '/build/block-about-main');
 }
 
 add_action( 'init', 'create_block_blocks_smarttech_block_init' );

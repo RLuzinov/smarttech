@@ -14,23 +14,19 @@
 }
 
 .profile-tabs__scaler {
-  width: 100%;
-  max-width: 1920px;
-  height: auto;
-  position: relative;
-  transform-origin: top center;
+  width: 1200px;
+  transform-origin: top right;
   margin: 0 auto;
-  background-color: #f6f6f6;
 }
 
 @media (max-width: 640px) {
   .profile-tabs__scaler {
-    max-width: 100%;
-    transform: none !important;
+    width: 100%;
   }
 }
 
 .profile-tabs {
+  background-color: #f6f6f6;
   padding: 80px 30px;
 }
 
@@ -67,20 +63,20 @@
   background-position: center;
   border-radius: 500px;
   opacity: 0;
-  transform: scale(var(--image-scale, 1.5)) rotate(-20deg);
+  transform: scale(1.5) rotate(-20deg);
   transition: opacity 0.4s, transform 0.4s;
 }
 
 .profile-tabs .profile-tabs__image.active {
   opacity: 1;
-  transform: scale(var(--image-scale, 1)) rotate(0deg);
+  transform: scale(1) rotate(0deg);
 }
 
 .profile-tabs__list {
   flex: 1;
   display: flex;
   flex-direction: column;
-  max-width: 900px;
+  max-width: 676px;
 }
 
 .profile-tabs__item {

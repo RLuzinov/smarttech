@@ -14,22 +14,20 @@ $mobile-breakpoint: 640px;
 	margin-block-start: 0 !important;
 }
 
+// Скейлер: zoom выставляется через JS (как в block-about-main).
+// При zoom контейнер сам схлопывается до нужной высоты — не нужно управлять height вручную.
 .profile-tabs__scaler {
-	width: 100%;
-	max-width: 1920px;
-	height: auto;
-	position: relative;
-	transform-origin: top center;
+	width: 1200px;
+	transform-origin: top left;
 	margin: 0 auto;
-	background-color: #f6f6f6;
 
 	@media (max-width: $mobile-breakpoint) {
-		max-width: 100%;
-		transform: none !important;
+		width: 100%;
 	}
 }
 
 .profile-tabs {
+	background-color: #f6f6f6;
 	padding: 80px 30px;
 
 	&__title {
@@ -52,31 +50,27 @@ $mobile-breakpoint: 640px;
 	&__images {
 		position: relative;
 		width: 355px;
-		// Было: height: 355px;
-		height: auto; // теперь высота задаётся через JS
+		height: auto;
 		min-height: 355px;
 		flex-shrink: 0;
-		// margin-right: 40px;
 	}
 
 	.profile-tabs__image {
 		position: absolute;
-		// left: 250px;
-		// top: 110px;
 		width: 355px;
 		height: 355px;
 		background-size: cover;
 		background-position: center;
 		border-radius: 500px;
 		opacity: 0;
-		transform: scale(var(--image-scale, 1.5)) rotate(20deg);
+		transform: scale(1.5) rotate(20deg);
 		transition:
 			opacity 0.4s,
 			transform 0.4s;
 
 		&.active {
 			opacity: 1;
-			transform: scale(var(--image-scale, 1)) rotate(0deg);
+			transform: scale(1) rotate(0deg);
 		}
 	}
 
@@ -84,7 +78,7 @@ $mobile-breakpoint: 640px;
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		max-width: 900px;
+		max-width: 676px;
 	}
 
 	&__item {
@@ -133,8 +127,6 @@ $mobile-breakpoint: 640px;
 	}
 }
 
-// Мобильная версия
-// Мобильная версия
 @media (max-width: $mobile-breakpoint) {
 	.profile-tabs {
 		padding: 40px 20px;
@@ -159,8 +151,8 @@ $mobile-breakpoint: 640px;
 			top: auto !important;
 			width: 72px !important;
 			height: 72px !important;
-			margin-right: -20px; // ← теперь наложение вправо
-			margin-left: 0; // сбрасываем, если был задан в общем стиле
+			margin-right: -20px;
+			margin-left: 0;
 			opacity: 0;
 			transform: none !important;
 			transition: none !important;
@@ -168,7 +160,7 @@ $mobile-breakpoint: 640px;
 			flex-shrink: 0;
 
 			&:last-child {
-				margin-right: 0; // последняя картинка без наложения
+				margin-right: 0;
 			}
 
 			&.mobile-visible {

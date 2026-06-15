@@ -1,6 +1,142 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
+	'block-about-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-about-main',
+		'version' => '0.1.0',
+		'title' => 'Block about fot main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Block about fot main page',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionLabel' => array(
+				'type' => 'string',
+				'default' => '/ О компании /'
+			),
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'SmartTech Development®'
+			),
+			'mainText' => array(
+				'type' => 'string',
+				'default' => 'Мы создаём девелоперские проекты нового поколения, объединяя технологии, стратегию и креативность. В нашей команде — эксперты мирового уровня в архитектуре, дизайне, BIM-проектировании, маркетинге, аналитике, digital и продуктовом менеджменте.'
+			),
+			'column2Texts' => array(
+				'type' => 'array',
+				'default' => array(
+					'Наш фокус — не просто квадратные метры, а устойчивые бизнес-модели, инвестиционная эффективность и долгосрочная ценность для клиентов, партнеров и территорий',
+					'Мы используем AI, Big Data и международные стандарты LEED / BREEAM, чтобы создавать девелоперские проекты, которые задают тренды в отрасли и формируют новое качество жизни и отдыха. Превращаем идеи в высоколиквидные девелоперские проекты',
+					'Мы верим, что девелопмент — это не метры, а экосистемы для жизни и бизнеса. SmartTech Development создает проекты, которые формируют будущее территорий и сообществ'
+				)
+			),
+			'videoUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'videoType' => array(
+				'type' => 'string',
+				'default' => 'url'
+			),
+			'videoPlaceholderUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'philosophyVideoUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'philosophyVideoType' => array(
+				'type' => 'string',
+				'default' => 'url'
+			),
+			'philosophyImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'philosophyLabel' => array(
+				'type' => 'string',
+				'default' => 'наша философия'
+			),
+			'metrics' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'label' => 'Реализованных проектов в отельной сфере за 2023–2025 гг.',
+						'number' => '1000+',
+						'unit' => '/проектов'
+					),
+					array(
+						'label' => 'Опыта в продуктовом девелопменте жилой и отельной недвижимости',
+						'number' => '15',
+						'unit' => '/лет'
+					),
+					array(
+						'label' => 'In-house экспертов и более 400 партнеров по всему миру — от архитекторов до аналитиков',
+						'number' => '+50',
+						'unit' => '/экспертов'
+					),
+					array(
+						'label' => 'Россия, СНГ, Азия, Восток',
+						'number' => '5',
+						'unit' => '/офисов'
+					),
+					array(
+						'label' => 'Архитектурных наград и премий',
+						'number' => '+50',
+						'unit' => '/наград'
+					)
+				)
+			),
+			'certificationTitle' => array(
+				'type' => 'string',
+				'default' => 'LEED Accredited'
+			),
+			'certificationText' => array(
+				'type' => 'string',
+				'default' => 'Работаем по международным стандартам LEED Accredited Professionals/BREEAM Assessors'
+			),
+			'awards' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'text' => '1-е место в номинации «Лучший кемпинг Innovation до 150 м²»',
+						'imageUrl' => ''
+					),
+					array(
+						'text' => '1-е место в номинации «Красивые дома. Интерьер»',
+						'imageUrl' => ''
+					),
+					array(
+						'text' => '1-е место в номинации «Объект 2020 года»',
+						'imageUrl' => ''
+					),
+					array(
+						'text' => '1-е место в номинации «Загородная недвижимость»',
+						'imageUrl' => ''
+					),
+					array(
+						'text' => 'Гран-при в номинации «Архитектура жилых зданий»',
+						'imageUrl' => ''
+					),
+					array(
+						'text' => '1-е место в номинации «Лучшей объект культуры Innovation»',
+						'imageUrl' => ''
+					)
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-header' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
