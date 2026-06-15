@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-smarttech/block-about-main",
+	"version": "0.1.0",
+	"title": "Block about fot main page",
+	"category": "smarttech",
+	"icon": "smiley",
+	"description": "Block about fot main page",
+	"example": {},
+	"attributes": {
+		"sectionLabel": { "type": "string", "default": "/ О компании /" },
+		"sectionTitle": { "type": "string", "default": "SmartTech Development®" },
+		"mainText": {
+			"type": "string",
+			"default": "Мы создаём девелоперские проекты нового поколения, объединяя технологии, стратегию и креативность. В нашей команде — эксперты мирового уровня в архитектуре, дизайне, BIM-проектировании, маркетинге, аналитике, digital и продуктовом менеджменте."
+		},
+		"column2Texts": {
+			"type": "array",
+			"default": [
+				"Наш фокус — не просто квадратные метры, а устойчивые бизнес-модели, инвестиционная эффективность и долгосрочная ценность для клиентов, партнеров и территорий",
+				"Мы используем AI, Big Data и международные стандарты LEED / BREEAM, чтобы создавать девелоперские проекты, которые задают тренды в отрасли и формируют новое качество жизни и отдыха. Превращаем идеи в высоколиквидные девелоперские проекты",
+				"Мы верим, что девелопмент — это не метры, а экосистемы для жизни и бизнеса. SmartTech Development создает проекты, которые формируют будущее территорий и сообществ"
+			]
+		},
+		"videoUrl": { "type": "string", "default": "" },
+		"videoType": { "type": "string", "default": "url" },
+		"videoPlaceholderUrl": { "type": "string", "default": "" },
+		"philosophyVideoUrl": { "type": "string", "default": "" },
+		"philosophyVideoType": { "type": "string", "default": "url" },
+		"philosophyImageUrl": { "type": "string", "default": "" },
+		"philosophyLabel": { "type": "string", "default": "наша философия" },
+		"metrics": {
+			"type": "array",
+			"default": [
+				{
+					"label": "Реализованных проектов в отельной сфере за 2023–2025 гг.",
+					"number": "1000+",
+					"unit": "/проектов"
+				},
+				{
+					"label": "Опыта в продуктовом девелопменте жилой и отельной недвижимости",
+					"number": "15",
+					"unit": "/лет"
+				},
+				{
+					"label": "In-house экспертов и более 400 партнеров по всему миру — от архитекторов до аналитиков",
+					"number": "+50",
+					"unit": "/экспертов"
+				},
+				{
+					"label": "Россия, СНГ, Азия, Восток",
+					"number": "5",
+					"unit": "/офисов"
+				},
+				{
+					"label": "Архитектурных наград и премий",
+					"number": "+50",
+					"unit": "/наград"
+				}
+			]
+		},
+		"certificationTitle": { "type": "string", "default": "LEED Accredited" },
+		"certificationText": {
+			"type": "string",
+			"default": "Работаем по международным стандартам LEED Accredited Professionals/BREEAM Assessors"
+		},
+		"awards": {
+			"type": "array",
+			"default": [
+				{ "text": "1-е место в номинации «Лучший кемпинг Innovation до 150 м²»", "imageUrl": "" },
+				{ "text": "1-е место в номинации «Красивые дома. Интерьер»", "imageUrl": "" },
+				{ "text": "1-е место в номинации «Объект 2020 года»", "imageUrl": "" },
+				{ "text": "1-е место в номинации «Загородная недвижимость»", "imageUrl": "" },
+				{ "text": "Гран-при в номинации «Архитектура жилых зданий»", "imageUrl": "" },
+				{ "text": "1-е место в номинации «Лучшей объект культуры Innovation»", "imageUrl": "" }
+			]
+		}
+	},
+	"supports": { "html": false },
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
