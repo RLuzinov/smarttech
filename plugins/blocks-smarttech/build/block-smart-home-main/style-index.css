@@ -1,0 +1,222 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-smart-home-main/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.wp-block-blocks-smarttech-block-smart-home {
+  margin-block-start: 0 !important;
+  overflow: hidden;
+}
+.smart-home-scaler {
+  width: 1200px;
+  margin: 0 auto;
+  transform-origin: top center;
+}
+.smart-home-block {
+  background: #f6f6f6;
+  padding: 80px 30px;
+  font-family: "Atyp Display", Arial, sans-serif;
+  color: #252525;
+}
+/* Строки */
+.smart-home__row {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: flex-start;
+}
+.smart-home__row--first {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.smart-home__row--second {
+  max-width: 850px;
+  margin-left: 0;
+  margin-right: auto;
+}
+.smart-home__row--third {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+/* Текстовая колонка в первой строке */
+.smart-home__text-col {
+  flex: 1;
+  padding-right: 20px;
+}
+.smart-home__title {
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+.smart-home__description {
+  font-size: 16px;
+  line-height: 1.4;
+  color: #252525;
+  opacity: 0.8;
+}
+/* Колонки с карточками */
+.smart-home__col {
+  flex-shrink: 0;
+}
+.smart-home__col--w560 {
+  width: 560px;
+  background: #fff;
+  padding: 10px;
+}
+.smart-home__col--w270 {
+  width: 270px;
+  background: #fff;
+  padding: 10px;
+}
+/* Слайдер */
+.smart-home__slider {
+  position: relative;
+  overflow: hidden;
+}
+.smart-home__slider-viewport {
+  width: 100%;
+  max-height: 320px;
+}
+.smart-home__slide {
+  width: 100%;
+}
+.smart-home__slide-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Видео-блок */
+.smart-home__video-block {
+  position: relative;
+}
+.smart-home__video-poster {
+  width: 100%;
+  display: block;
+}
+.smart-home__video-element {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.smart-home__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.smart-home__play-icon svg {
+  width: 30px;
+  height: 21px;
+}
+.smart-home__rotating-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  z-index: 1;
+}
+.smart-home__rotating-svg {
+  animation: rotate 10s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Стрелки слайдера */
+.smart-home__slider-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.smart-home__arrow {
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: background 0.2s;
+}
+.smart-home__arrow:hover {
+  background: rgb(255, 255, 255);
+}
+/* Информация под слайдером */
+.smart-home__card-info {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.smart-home__card-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+.card-button {
+  padding: 8px 16px;
+}
+/* Адаптив */
+@media (max-width: 1199px) {
+  .smart-home-scaler {
+    width: 100%;
+  }
+  .smart-home-block {
+    padding: 40px 20px;
+  }
+  .smart-home__row {
+    flex-wrap: wrap;
+    max-width: 100% !important;
+    justify-content: center;
+    margin: 0;
+  }
+  .smart-home__col {
+    width: calc(50% - 10px) !important;
+  }
+  .smart-home__col--w560, .smart-home__col--w270 {
+    width: calc(50% - 10px) !important;
+  }
+}
+@media (max-width: 639px) {
+  .smart-home-block {
+    padding: 30px 15px;
+  }
+  .smart-home__col {
+    width: 100% !important;
+  }
+  .smart-home__row--first .smart-home__text-col {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

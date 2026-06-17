@@ -541,6 +541,105 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-smart-home-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-smart-home-main',
+		'version' => '0.1.0',
+		'title' => 'Block Smart Home for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'SmartHome'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'Разрабатываем концепции, проектируем и производим модульные дома по prefab-технологии для загородных отелей и клубных коттеджных поселков'
+			),
+			'rows' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'layout' => 'first',
+						'columns' => array(
+							array(
+								'width' => 560,
+								'media' => array(
+									array(
+										'type' => 'image',
+										'url' => '',
+										'poster' => '',
+										'rotatingText' => ''
+									)
+								),
+								'title' => 'GLASS VILLA',
+								'buttonText' => 'Подробнее',
+								'buttonUrl' => '#'
+							)
+						)
+					),
+					array(
+						'layout' => 'second',
+						'columns' => array(
+							array(
+								'width' => 560,
+								'media' => array(
+									
+								),
+								'title' => 'GLASS VILLA XL',
+								'buttonText' => 'Подробнее',
+								'buttonUrl' => '#'
+							),
+							array(
+								'width' => 270,
+								'media' => array(
+									
+								),
+								'title' => 'Отель HELTON',
+								'buttonText' => 'Подробнее',
+								'buttonUrl' => '#'
+							)
+						)
+					),
+					array(
+						'layout' => 'third',
+						'columns' => array(
+							array(
+								'width' => 560,
+								'media' => array(
+									
+								),
+								'title' => 'Модель X GREY GLASS',
+								'buttonText' => 'Подробнее',
+								'buttonUrl' => '#'
+							),
+							array(
+								'width' => 270,
+								'media' => array(
+									
+								),
+								'title' => 'Дом, 125 м2',
+								'buttonText' => 'Подробнее',
+								'buttonUrl' => '#'
+							)
+						)
+					)
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-tabs-main' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

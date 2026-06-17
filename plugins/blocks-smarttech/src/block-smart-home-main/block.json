@@ -1,0 +1,84 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-smarttech/block-smart-home-main",
+	"version": "0.1.0",
+	"title": "Block Smart Home for Main page",
+	"category": "smarttech",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"attributes": {
+		"sectionTitle": { "type": "string", "default": "SmartHome" },
+		"sectionDescription": {
+			"type": "string",
+			"default": "Разрабатываем концепции, проектируем и производим модульные дома по prefab-технологии для загородных отелей и клубных коттеджных поселков"
+		},
+		"rows": {
+			"type": "array",
+			"default": [
+				{
+					"layout": "first",
+					"columns": [
+						{
+							"width": 560,
+							"media": [
+								{
+									"type": "image",
+									"url": "",
+									"poster": "",
+									"rotatingText": ""
+								}
+							],
+							"title": "GLASS VILLA",
+							"buttonText": "Подробнее",
+							"buttonUrl": "#"
+						}
+					]
+				},
+				{
+					"layout": "second",
+					"columns": [
+						{
+							"width": 560,
+							"media": [],
+							"title": "GLASS VILLA XL",
+							"buttonText": "Подробнее",
+							"buttonUrl": "#"
+						},
+						{
+							"width": 270,
+							"media": [],
+							"title": "Отель HELTON",
+							"buttonText": "Подробнее",
+							"buttonUrl": "#"
+						}
+					]
+				},
+				{
+					"layout": "third",
+					"columns": [
+						{
+							"width": 560,
+							"media": [],
+							"title": "Модель X GREY GLASS",
+							"buttonText": "Подробнее",
+							"buttonUrl": "#"
+						},
+						{
+							"width": 270,
+							"media": [],
+							"title": "Дом, 125 м2",
+							"buttonText": "Подробнее",
+							"buttonUrl": "#"
+						}
+					]
+				}
+			]
+		}
+	},
+	"supports": { "html": false },
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
