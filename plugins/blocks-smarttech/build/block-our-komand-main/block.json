@@ -1,0 +1,194 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocks-smarttech/block-our-komand-main",
+  "version": "0.1.0",
+  "title": "Block Our Komand for Main page",
+  "category": "smarttech",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "Команда"
+    },
+    "sectionDescription": {
+      "type": "string",
+      "default": "Мы нацелены строить долгосрочные, честные и надёжные партнёрские отношения"
+    },
+    "teamRows": {
+      "type": "array",
+      "default": [
+        [
+          {
+            "imageUrl": "",
+            "name": "Сергей Майоров",
+            "position": "руководитель отдела Horeca",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Мария Курицына",
+            "position": "руководитель отдела развития",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Михаил Кузин",
+            "position": "руководитель отдела продаж B2B",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Евгений Синдер",
+            "position": "руководитель PR-отдела",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Василий Матафанов",
+            "position": "искусство в городской среде",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Андрей Соколов",
+            "position": "упаковка проекта к старту продаж",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Роман Войтов",
+            "position": "продуктолог",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Дмитрий Анцупов",
+            "position": "руководитель отдела Horeca",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Алена Неймова",
+            "position": "архитектор",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Тотов Денис",
+            "position": "финансовый аналитик",
+            "doubleWidth": false
+          }
+        ],
+        [
+          {
+            "imageUrl": "",
+            "name": "Анастасия Пересада",
+            "position": "бренд-стратег",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Елена Губанова",
+            "position": "руководитель отдела продаж",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Денис Нырков",
+            "position": "руководитель отдела GR",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Роман Василенко",
+            "position": "руководитель отдела технадзора",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Екатерина Шмиртонова",
+            "position": "руководитель отдела smm",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Оганес Байбуртян",
+            "position": "бренд-стратег",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Александр",
+            "position": "",
+            "doubleWidth": false
+          }
+        ],
+        [
+          {
+            "imageUrl": "",
+            "name": "Артем Мальцев",
+            "position": "руководитель отдела продаж международные рынки",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Роман Старостин",
+            "position": "продуктолог",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Мария Руз",
+            "position": "бренд-стратегия, бренд-платформа",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Андрей Сафронов",
+            "position": "руководитель отдела проектирования",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Павел Железный",
+            "position": "руководитель отдела prefab-разработок",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Лилия Искандарова",
+            "position": "руководитель отдела по работе с кредитными организациями",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Евгений Тюнцев",
+            "position": "руководитель аналитического отдела",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Михаил Пурасов",
+            "position": "руководитель отдела коллективных инвестиций",
+            "doubleWidth": false
+          },
+          {
+            "imageUrl": "",
+            "name": "Евгений Сафронов",
+            "position": "руководитель продуктового отдела",
+            "doubleWidth": false
+          }
+        ]
+      ]
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
