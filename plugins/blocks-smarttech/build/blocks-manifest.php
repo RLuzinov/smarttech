@@ -737,6 +737,57 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-our-partners-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-our-partners-main',
+		'version' => '0.1.0',
+		'title' => 'Block Our Partners for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Клиенты и партнеры'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'SmartTech Development — партнер, которому доверяют мировые лидеры индустрии'
+			),
+			'tabButtons' => array(
+				'type' => 'array',
+				'default' => array(
+					'СНГ',
+					'Мир'
+				)
+			),
+			'tabs' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'logos' => array(
+							
+						)
+					),
+					array(
+						'logos' => array(
+							
+						)
+					)
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-smart-home-main' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
