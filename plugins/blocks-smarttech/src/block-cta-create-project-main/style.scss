@@ -1,0 +1,127 @@
+$font-text: "Atyp Display", Arial, sans-serif;
+$color-dark: #252525;
+
+.wp-block-blocks-smarttech-block-cta-create-project-main {
+	margin-block-start: 0 !important;
+	margin-top: 0 !important;
+}
+
+.cta-scaler {
+	width: 1200px;
+	margin: 0 auto;
+	transform-origin: top center;
+}
+
+.cta-block {
+	min-height: 635px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	padding-top: 80px;
+	padding-bottom: 125px;
+	display: flex;
+	justify-content: center;
+	font-family: $font-text;
+	color: $color-dark;
+	position: relative;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.cta__card {
+	background: #ffffff;
+	padding: 40px;
+	max-width: 500px;
+	text-align: center;
+	will-change: transform;
+
+	@media (max-width: 639px) {
+		max-width: 100%;
+		width: 100%;
+		padding: 30px 20px 50px;
+		box-sizing: border-box;
+	}
+}
+
+.cta__title {
+	font-size: 26px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	margin: 0 0 20px;
+	line-height: 1.05;
+
+	@media (max-width: 639px) {
+		font-size: 22px;
+	}
+}
+
+.cta__card-image {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 50%;
+	margin-bottom: 20px;
+
+	@media (max-width: 639px) {
+		width: 115px;
+		height: 115px;
+	}
+}
+
+.cta__desc {
+	font-size: 13px;
+	line-height: 1.2;
+	color: $color-dark;
+	margin-bottom: 30px;
+
+	@media (max-width: 639px) {
+		max-width: 250px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.cta__button {
+	display: inline-block;
+	background-color: $color-dark;
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: 400;
+	padding: 12px 40px;
+	text-decoration: none;
+	border-radius: 50px;
+	border: 1px solid $color-dark;
+	transition:
+		background-color 0.2s,
+		color 0.2s;
+
+	&:hover {
+		background-color: #ffffff;
+		color: $color-dark;
+	}
+}
+
+@media (max-width: 1199px) {
+	.cta-scaler {
+		width: 100%;
+	}
+	.cta-block {
+		padding-left: 130px;
+	}
+}
+
+@media (max-width: 639px) {
+	.cta-scaler {
+		width: 100%;
+	}
+
+	.cta-block {
+		// JS выставит min-height: 100vh когда заблокирует скролл
+		min-height: 100svh;
+		padding: 24px 11px;
+		// Карточка прижата к низу — выезжает снизу вверх
+		align-items: flex-end;
+		justify-content: center;
+	}
+}

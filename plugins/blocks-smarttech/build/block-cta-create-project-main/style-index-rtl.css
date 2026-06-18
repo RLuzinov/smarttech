@@ -1,0 +1,131 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-cta-create-project-main/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-blocks-smarttech-block-cta-create-project-main {
+  margin-block-start: 0 !important;
+  margin-top: 0 !important;
+}
+
+.cta-scaler {
+  width: 1200px;
+  margin: 0 auto;
+  transform-origin: top center;
+}
+
+.cta-block {
+  min-height: 635px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding-top: 80px;
+  padding-bottom: 125px;
+  display: flex;
+  justify-content: center;
+  font-family: "Atyp Display", Arial, sans-serif;
+  color: #252525;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cta__card {
+  background: #ffffff;
+  padding: 40px;
+  max-width: 500px;
+  text-align: center;
+  will-change: transform;
+}
+
+@media (max-width: 639px) {
+  .cta__card {
+    max-width: 100%;
+    width: 100%;
+    padding: 30px 20px 50px;
+    box-sizing: border-box;
+  }
+}
+
+.cta__title {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+  line-height: 1.05;
+}
+
+@media (max-width: 639px) {
+  .cta__title {
+    font-size: 22px;
+  }
+}
+
+.cta__card-image {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 639px) {
+  .cta__card-image {
+    width: 115px;
+    height: 115px;
+  }
+}
+
+.cta__desc {
+  font-size: 13px;
+  line-height: 1.2;
+  color: #252525;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 639px) {
+  .cta__desc {
+    max-width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.cta__button {
+  display: inline-block;
+  background-color: #252525;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 12px 40px;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 1px solid #252525;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cta__button:hover {
+  background-color: #ffffff;
+  color: #252525;
+}
+
+@media (max-width: 1199px) {
+  .cta-scaler {
+    width: 100%;
+  }
+  .cta-block {
+    padding-right: 130px;
+  }
+}
+
+@media (max-width: 639px) {
+  .cta-scaler {
+    width: 100%;
+  }
+  .cta-block {
+    min-height: 100svh;
+    padding: 24px 11px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}

@@ -206,6 +206,48 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-cta-create-project-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-cta-create-project-main',
+		'version' => '0.1.0',
+		'title' => 'Block CTA Create Project for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'attributes' => array(
+			'backgroundImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Давайте создадим ваш девелоперский-проект мечты'
+			),
+			'cardImageUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'description' => array(
+				'type' => 'string',
+				'default' => 'Расскажите о своей идее — и мы покажем, как превратить её в прибыльный спа-комплекс с гарантированной окупаемостью'
+			),
+			'buttonText' => array(
+				'type' => 'string',
+				'default' => 'Обсудить проект'
+			),
+			'buttonUrl' => array(
+				'type' => 'string',
+				'default' => '#popup:myform-consult'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-header' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

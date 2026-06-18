@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-smarttech/block-cta-create-project-main",
+	"version": "0.1.0",
+	"title": "Block CTA Create Project for Main page",
+	"category": "smarttech",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"attributes": {
+		"backgroundImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"sectionTitle": {
+			"type": "string",
+			"default": "Давайте создадим ваш девелоперский-проект мечты"
+		},
+		"cardImageUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"description": {
+			"type": "string",
+			"default": "Расскажите о своей идее — и мы покажем, как превратить её в прибыльный спа-комплекс с гарантированной окупаемостью"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Обсудить проект"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#popup:myform-consult"
+		}
+	},
+	"supports": { "html": false },
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
