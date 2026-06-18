@@ -788,6 +788,120 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-partner-prog-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-partner-prog-main',
+		'version' => '0.1.0',
+		'title' => 'Block Partner Programs for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Партнерская программа
+SmartTech Development®'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'Мы сотрудничаем с девелоперами, государственными структурами, подрядчиками, агентствами, консультантами и отельными операторами. Наша цель — реализовывать эффективные проекты любого масштаба вместе с сильными партнёрами'
+			),
+			'topCards' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => 'Для девелоперов',
+						'description' => 'Полный цикл продуктового девелопмента: от анализа рынка до реализации и продаж:
+
+• единый центр компетенций;
+• экономия времени и снижение рисков;
+• максимальная инвестиционная эффективность'
+					),
+					array(
+						'title' => 'Для агентств',
+						'description' => 'Продвижение и совместные продажи:
+
+• комиссия до 10%;
+• совместные маркетинговые кампании;
+• обучение партнеров'
+					),
+					array(
+						'title' => 'Для отельных операторов',
+						'description' => 'Совместное развитие объектов и брендов:
+
+• внедрение международных стандартов сервиса;
+• оптимизация бизнес-модели и доходности;
+• участие в проектах от бутик-отелей до курортов'
+					),
+					array(
+						'title' => 'Для государственных структур',
+						'description' => 'Развитие регионов и качества жизни:
+
+• туризм и социальная инфраструктура;
+• опыт федеральных и международных проектов'
+					)
+				)
+			),
+			'videoUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'videoType' => array(
+				'type' => 'string',
+				'default' => 'url'
+			),
+			'videoPlaceholderUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'videoRotatingText' => array(
+				'type' => 'string',
+				'default' => 'смотреть видео • смотреть видео • смотреть видео •'
+			),
+			'bottomCards' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => 'Для консультантов',
+						'description' => 'Синергия экспертизы и идей:
+
+• реферальная программа;
+• совместные исследования и мероприятия'
+					),
+					array(
+						'title' => 'Для подрядчиков',
+						'description' => 'Надёжные партнёрства и долгосрочные контракты:
+
+• прогнозируемый объем работ;
+• совместные инновационные проекты'
+					)
+				)
+			),
+			'ctaText' => array(
+				'type' => 'string',
+				'default' => 'Оставьте контакты — и мы предложим индивидуальные условия сотрудничества.
+Запросите презентацию партнёрской программы, чтобы узнать больше'
+			),
+			'buttonText' => array(
+				'type' => 'string',
+				'default' => 'Презентация партнерской программы'
+			),
+			'buttonUrl' => array(
+				'type' => 'string',
+				'default' => '#popup:myform-consult'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-smart-home-main' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
