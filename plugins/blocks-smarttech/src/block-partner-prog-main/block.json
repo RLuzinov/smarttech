@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-smarttech/block-partner-prog-main",
+	"version": "0.1.0",
+	"title": "Block Partner Programs for Main page",
+	"category": "smarttech",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"example": {},
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "Партнерская программа\nSmartTech Development®"
+		},
+		"sectionDescription": {
+			"type": "string",
+			"default": "Мы сотрудничаем с девелоперами, государственными структурами, подрядчиками, агентствами, консультантами и отельными операторами. Наша цель — реализовывать эффективные проекты любого масштаба вместе с сильными партнёрами"
+		},
+		"topCards": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Для девелоперов",
+					"description": "Полный цикл продуктового девелопмента: от анализа рынка до реализации и продаж:\n\n• единый центр компетенций;\n• экономия времени и снижение рисков;\n• максимальная инвестиционная эффективность"
+				},
+				{
+					"title": "Для агентств",
+					"description": "Продвижение и совместные продажи:\n\n• комиссия до 10%;\n• совместные маркетинговые кампании;\n• обучение партнеров"
+				},
+				{
+					"title": "Для отельных операторов",
+					"description": "Совместное развитие объектов и брендов:\n\n• внедрение международных стандартов сервиса;\n• оптимизация бизнес-модели и доходности;\n• участие в проектах от бутик-отелей до курортов"
+				},
+				{
+					"title": "Для государственных структур",
+					"description": "Развитие регионов и качества жизни:\n\n• туризм и социальная инфраструктура;\n• опыт федеральных и международных проектов"
+				}
+			]
+		},
+		"videoUrl": { "type": "string", "default": "" },
+		"videoType": { "type": "string", "default": "url" },
+		"videoPlaceholderUrl": { "type": "string", "default": "" },
+		"videoRotatingText": {
+			"type": "string",
+			"default": "смотреть видео • смотреть видео • смотреть видео •"
+		},
+		"bottomCards": {
+			"type": "array",
+			"default": [
+				{
+					"title": "Для консультантов",
+					"description": "Синергия экспертизы и идей:\n\n• реферальная программа;\n• совместные исследования и мероприятия"
+				},
+				{
+					"title": "Для подрядчиков",
+					"description": "Надёжные партнёрства и долгосрочные контракты:\n\n• прогнозируемый объем работ;\n• совместные инновационные проекты"
+				}
+			]
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Оставьте контакты — и мы предложим индивидуальные условия сотрудничества.\nЗапросите презентацию партнёрской программы, чтобы узнать больше"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": "Презентация партнерской программы"
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": "#popup:myform-consult"
+		}
+	},
+	"supports": { "html": false },
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

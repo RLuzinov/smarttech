@@ -1,0 +1,114 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-our-komand-main/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.wp-block-blocks-smarttech-block-our-komand-main {
+  margin-block-start: 0 !important;
+  overflow: hidden;
+  margin-top: 0 !important;
+}
+.team-scaler {
+  width: 1200px;
+  margin: 0 auto;
+  transform-origin: top center;
+}
+.team-block {
+  background: #f6f6f6;
+  padding: 80px 30px;
+  font-family: "Atyp Display", Arial, sans-serif;
+  color: #252525;
+}
+.team__title {
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+.team__description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #252525;
+  opacity: 0.8;
+  white-space: pre-line;
+  margin-bottom: 40px;
+  max-width: 321px;
+}
+.team__marquee {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.team__track {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  will-change: transform;
+}
+.team__card-set {
+  display: flex;
+  gap: 10px;
+}
+.team__card {
+  width: 179px;
+  min-height: 227px;
+  flex-shrink: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+.team__card--double {
+  width: 368px;
+}
+.team__card-image {
+  width: 100%;
+  max-height: 179px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.team__card-info {
+  padding: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 48px;
+}
+.team__card-name {
+  font-size: 13px;
+  font-weight: 400;
+  color: #252525;
+  line-height: 1;
+}
+.team__card-position {
+  font-size: 10px;
+  color: #252525;
+  opacity: 0.7;
+  line-height: 1;
+}
+/* Адаптив */
+@media (max-width: 1199px) {
+  .team-scaler {
+    width: 100%;
+  }
+  .team-block {
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 639px) {
+  .team-block {
+    padding: 30px 15px;
+  }
+  .team__title {
+    font-size: 28px;
+  }
+  .team__card {
+    width: 150px;
+    height: 200px;
+  }
+  .team__card--double {
+    width: 300px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

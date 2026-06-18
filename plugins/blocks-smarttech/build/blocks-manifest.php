@@ -541,6 +541,367 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-our-komand-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-our-komand-main',
+		'version' => '0.1.0',
+		'title' => 'Block Our Komand for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Команда'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'Мы нацелены строить долгосрочные, честные и надёжные партнёрские отношения'
+			),
+			'teamRows' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						array(
+							'imageUrl' => '',
+							'name' => 'Сергей Майоров',
+							'position' => 'руководитель отдела Horeca',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Мария Курицына',
+							'position' => 'руководитель отдела развития',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Михаил Кузин',
+							'position' => 'руководитель отдела продаж B2B',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Евгений Синдер',
+							'position' => 'руководитель PR-отдела',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Василий Матафанов',
+							'position' => 'искусство в городской среде',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Андрей Соколов',
+							'position' => 'упаковка проекта к старту продаж',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Роман Войтов',
+							'position' => 'продуктолог',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Дмитрий Анцупов',
+							'position' => 'руководитель отдела Horeca',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Алена Неймова',
+							'position' => 'архитектор',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Тотов Денис',
+							'position' => 'финансовый аналитик',
+							'doubleWidth' => false
+						)
+					),
+					array(
+						array(
+							'imageUrl' => '',
+							'name' => 'Анастасия Пересада',
+							'position' => 'бренд-стратег',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Елена Губанова',
+							'position' => 'руководитель отдела продаж',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Денис Нырков',
+							'position' => 'руководитель отдела GR',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Роман Василенко',
+							'position' => 'руководитель отдела технадзора',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Екатерина Шмиртонова',
+							'position' => 'руководитель отдела smm',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Оганес Байбуртян',
+							'position' => 'бренд-стратег',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Александр',
+							'position' => '',
+							'doubleWidth' => false
+						)
+					),
+					array(
+						array(
+							'imageUrl' => '',
+							'name' => 'Артем Мальцев',
+							'position' => 'руководитель отдела продаж международные рынки',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Роман Старостин',
+							'position' => 'продуктолог',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Мария Руз',
+							'position' => 'бренд-стратегия, бренд-платформа',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Андрей Сафронов',
+							'position' => 'руководитель отдела проектирования',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Павел Железный',
+							'position' => 'руководитель отдела prefab-разработок',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Лилия Искандарова',
+							'position' => 'руководитель отдела по работе с кредитными организациями',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Евгений Тюнцев',
+							'position' => 'руководитель аналитического отдела',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Михаил Пурасов',
+							'position' => 'руководитель отдела коллективных инвестиций',
+							'doubleWidth' => false
+						),
+						array(
+							'imageUrl' => '',
+							'name' => 'Евгений Сафронов',
+							'position' => 'руководитель продуктового отдела',
+							'doubleWidth' => false
+						)
+					)
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
+	'block-our-partners-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-our-partners-main',
+		'version' => '0.1.0',
+		'title' => 'Block Our Partners for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Клиенты и партнеры'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'SmartTech Development — партнер, которому доверяют мировые лидеры индустрии'
+			),
+			'tabButtons' => array(
+				'type' => 'array',
+				'default' => array(
+					'СНГ',
+					'Мир'
+				)
+			),
+			'tabs' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'logos' => array(
+							
+						)
+					),
+					array(
+						'logos' => array(
+							
+						)
+					)
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
+	'block-partner-prog-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-partner-prog-main',
+		'version' => '0.1.0',
+		'title' => 'Block Partner Programs for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Партнерская программа
+SmartTech Development®'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'Мы сотрудничаем с девелоперами, государственными структурами, подрядчиками, агентствами, консультантами и отельными операторами. Наша цель — реализовывать эффективные проекты любого масштаба вместе с сильными партнёрами'
+			),
+			'topCards' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => 'Для девелоперов',
+						'description' => 'Полный цикл продуктового девелопмента: от анализа рынка до реализации и продаж:
+
+• единый центр компетенций;
+• экономия времени и снижение рисков;
+• максимальная инвестиционная эффективность'
+					),
+					array(
+						'title' => 'Для агентств',
+						'description' => 'Продвижение и совместные продажи:
+
+• комиссия до 10%;
+• совместные маркетинговые кампании;
+• обучение партнеров'
+					),
+					array(
+						'title' => 'Для отельных операторов',
+						'description' => 'Совместное развитие объектов и брендов:
+
+• внедрение международных стандартов сервиса;
+• оптимизация бизнес-модели и доходности;
+• участие в проектах от бутик-отелей до курортов'
+					),
+					array(
+						'title' => 'Для государственных структур',
+						'description' => 'Развитие регионов и качества жизни:
+
+• туризм и социальная инфраструктура;
+• опыт федеральных и международных проектов'
+					)
+				)
+			),
+			'videoUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'videoType' => array(
+				'type' => 'string',
+				'default' => 'url'
+			),
+			'videoPlaceholderUrl' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'videoRotatingText' => array(
+				'type' => 'string',
+				'default' => 'смотреть видео • смотреть видео • смотреть видео •'
+			),
+			'bottomCards' => array(
+				'type' => 'array',
+				'default' => array(
+					array(
+						'title' => 'Для консультантов',
+						'description' => 'Синергия экспертизы и идей:
+
+• реферальная программа;
+• совместные исследования и мероприятия'
+					),
+					array(
+						'title' => 'Для подрядчиков',
+						'description' => 'Надёжные партнёрства и долгосрочные контракты:
+
+• прогнозируемый объем работ;
+• совместные инновационные проекты'
+					)
+				)
+			),
+			'ctaText' => array(
+				'type' => 'string',
+				'default' => 'Оставьте контакты — и мы предложим индивидуальные условия сотрудничества.
+Запросите презентацию партнёрской программы, чтобы узнать больше'
+			),
+			'buttonText' => array(
+				'type' => 'string',
+				'default' => 'Презентация партнерской программы'
+			),
+			'buttonUrl' => array(
+				'type' => 'string',
+				'default' => '#popup:myform-consult'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-smart-home-main' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,

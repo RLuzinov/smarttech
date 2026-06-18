@@ -1,0 +1,222 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-partner-prog-main/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.wp-block-blocks-smarttech-block-partner-prog-main {
+  margin-block-start: 0 !important;
+  overflow: hidden;
+  margin-top: 0px !important;
+}
+.partner-prog-scaler {
+  width: 1200px;
+  margin: 0 auto;
+  transform-origin: top center;
+}
+.partner-prog-block {
+  background: #f6f6f6;
+  padding: 80px 30px;
+  font-family: "Atyp Display", Arial, sans-serif;
+  color: #252525;
+}
+.partner-prog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+.partner-prog__title {
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.1;
+}
+.partner-prog__desc {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #252525;
+  opacity: 0.8;
+  max-width: 500px;
+  margin: 0;
+}
+.partner-prog__main-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.partner-prog__grid-top {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.partner-prog__card {
+  width: 270px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 240px;
+}
+.partner-prog__card-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+.partner-prog__card-divider {
+  height: 2px;
+  background-color: #262626;
+  margin-bottom: 15px;
+}
+.partner-prog__card-text {
+  font-size: 13px;
+  line-height: 1.15;
+  color: #262626;
+  opacity: 0.6;
+  white-space: pre-line;
+}
+/* ---------- Видео-блок (аналогично about__video-block) ---------- */
+.partner-prog__video-block {
+  position: relative;
+  width: 270px;
+  /* высота будет определяться плейсхолдером или видео */
+}
+/* Плейсхолдер – лежит поверх видео, перекрывая его */
+.partner-prog__video-poster {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2; /* выше видео/ютуб-контейнера */
+}
+/* Видео (mp4) – абсолютно позиционировано под плейсхолдером */
+.partner-prog__video-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* ниже плейсхолдера, но видно, когда плейсхолдер скрыт */
+  -o-object-fit: cover;
+     object-fit: cover; /* чтобы видео заполняло контейнер, как плейсхолдер */
+}
+/* Контейнер для YouTube iframe – аналогично видео */
+.partner-prog__youtube-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 499px;
+  z-index: 1;
+}
+.partner-prog__youtube-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+/* Кнопка Play – поверх плейсхолдера */
+.partner-prog__play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 3; /* выше плейсхолдера */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partner-prog__play-icon svg {
+  width: 30px;
+  height: 21px;
+}
+/* Вращающийся текст – поверх плейсхолдера, но не перекрывает кнопку */
+.partner-prog__rotating-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  z-index: 2; /* на уровне плейсхолдера, но ниже кнопки */
+}
+.partner-prog__rotating-svg {
+  animation: rotate 10s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+/* CTA-блок */
+.partner-prog__cta {
+  margin-top: 20px;
+  text-align: center;
+}
+.partner-prog__cta-text {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #252525;
+  opacity: 0.8;
+  white-space: pre-line;
+  margin-bottom: 20px;
+}
+.partner-prog__cta-button {
+  display: inline-block;
+  width: 100%;
+  color: #ffffff;
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background-color 0.2s;
+}
+.partner-prog__cta-button:hover {
+  background-color: #ffffff;
+  color: var(--color-dark);
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.partner-prog__grid-bottom {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1199px) {
+  .partner-prog-scaler {
+    width: 100%;
+  }
+  .partner-prog__header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .partner-prog__card {
+    width: 45%;
+  }
+}
+@media (max-width: 639px) {
+  .partner-prog__title {
+    font-size: 24px;
+  }
+  .partner-prog__main-grid {
+    flex-direction: column;
+  }
+  .partner-prog-block {
+    padding: 30px 15px;
+  }
+  .partner-prog__card {
+    width: 100%;
+  }
+  .partner-prog__cta-button {
+    font-size: 12px;
+    padding: 8px 0;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

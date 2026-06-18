@@ -1,0 +1,207 @@
+$font-text: "Atyp Display", Arial, sans-serif;
+$color-dark: #252525;
+$color-bg: #f6f6f6;
+
+.wp-block-blocks-smarttech-block-our-partners-main {
+	margin-block-start: 0 !important;
+	overflow: hidden;
+	margin-top: 0px !important;
+}
+
+.partner-scaler {
+	width: 1200px;
+	margin: 0 auto;
+	transform-origin: top center;
+}
+
+.partner-block {
+	background: $color-bg;
+	padding: 40px 30px;
+	font-family: $font-text;
+	color: $color-dark;
+}
+
+.partner__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.partner__text {
+	max-width: 546px;
+}
+
+.partner__title {
+	font-size: 36px;
+	font-weight: 400;
+	letter-spacing: -1px;
+	margin: 0 0 20px;
+	line-height: 1.1;
+}
+
+.partner__desc {
+	font-size: 14px;
+	line-height: 1.4;
+	color: $color-dark;
+	opacity: 0.8;
+	max-width: 321px;
+	margin: 0;
+}
+
+.partner__tabs-buttons {
+	display: flex;
+	gap: 10px;
+}
+
+.partner__tab-btn {
+	background: none;
+	border: 1px solid $color-dark;
+	padding: 8px 20px;
+	font-size: 14px;
+	cursor: pointer;
+	color: $color-dark;
+	border-radius: 20px;
+	transition: all 0.2s;
+
+	&--active {
+		background: $color-dark;
+		color: #fff;
+	}
+}
+.partner__h-line--intermediate {
+	position: absolute;
+	height: 1px;
+	background-color: #262626;
+	opacity: 0.6;
+	left: 0;
+	width: 100%;
+}
+
+.partner__tabs-content {
+	margin-top: 40px;
+}
+
+.partner__tab-panel {
+	display: none;
+	&--active {
+		display: block;
+	}
+}
+
+.partner__logos-grid {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 5px;
+	position: relative;
+	// padding: 10px;
+}
+
+.partner__logo-item {
+	width: 208px;
+	height: 130px;
+	// background: $color-dark;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	position: relative; // чтобы в него можно было добавить абсолютные линии
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+
+/* Декоративные линии */
+.partner__lines-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.partner__h-line {
+	position: absolute;
+	height: 1px;
+	background-color: #262626;
+	opacity: 0.6;
+	left: 0;
+	width: 100%;
+
+	&--top {
+		top: 0;
+	}
+	&--bottom {
+		bottom: 0;
+	}
+}
+
+.partner__v-line {
+	position: absolute;
+	width: 1px;
+	height: 20px;
+	background-color: #262626;
+	opacity: 0.6;
+
+	&--top-left {
+		top: 0;
+		left: 0;
+	}
+	&--top-right {
+		top: 0;
+		right: 0;
+	}
+	&--bottom-left {
+		bottom: 0;
+		left: 0;
+	}
+	&--bottom-right {
+		bottom: 0;
+		right: 0;
+	}
+	// Промежуточные линии (добавляются через JS)
+	&--top-between {
+		top: 0;
+		right: -10px; // будет скорректировано JS, но оставляем запас
+	}
+	&--bottom-between {
+		bottom: 0;
+		right: -10px;
+	}
+}
+.partner__h-line--top-of-row,
+.partner__h-line--bottom-of-row {
+	position: absolute;
+	height: 1px;
+	background-color: #262626;
+	opacity: 0.6;
+}
+
+// Адаптив
+@media (max-width: 1199px) {
+	.partner-scaler {
+		width: 100%;
+	}
+	.partner__header {
+		flex-direction: column;
+		gap: 20px;
+	}
+	.partner__logo-item {
+		width: 189px;
+		height: 118px;
+	}
+}
+
+@media (max-width: 639px) {
+	.partner-block {
+		padding: 30px 15px;
+	}
+	.partner__logo-item {
+		width: 125px;
+		height: 85px;
+		padding: 5px 6px;
+	}
+}

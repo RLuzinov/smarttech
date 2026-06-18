@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "blocks-smarttech/block-our-partners-main",
+  "version": "0.1.0",
+  "title": "Block Our Partners for Main page",
+  "category": "smarttech",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "Клиенты и партнеры"
+    },
+    "sectionDescription": {
+      "type": "string",
+      "default": "SmartTech Development — партнер, которому доверяют мировые лидеры индустрии"
+    },
+    "tabButtons": {
+      "type": "array",
+      "default": [
+        "СНГ",
+        "Мир"
+      ]
+    },
+    "tabs": {
+      "type": "array",
+      "default": [
+        {
+          "logos": []
+        },
+        {
+          "logos": []
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
