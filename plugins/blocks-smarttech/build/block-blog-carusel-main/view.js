@@ -24,7 +24,7 @@
     });
   }
   function init() {
-    updateScale();
+    // updateScale();
     setCSSVariables();
   }
   if (document.readyState === "loading") {
@@ -33,7 +33,7 @@
     init();
   }
   window.addEventListener("load", init);
-  window.addEventListener("resize", updateScale);
+  // window.addEventListener("resize", updateScale);
 })();
 /******/ })()
 ;

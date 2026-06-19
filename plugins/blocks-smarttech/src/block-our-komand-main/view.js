@@ -113,8 +113,8 @@
 	}
 
 	window.addEventListener("load", () => {
-		updateScale();
+		// updateScale();
 		equalizeAndAnimate();
 	});
-	window.addEventListener("resize", updateScale);
+	// window.addEventListener("resize", updateScale);
 })();

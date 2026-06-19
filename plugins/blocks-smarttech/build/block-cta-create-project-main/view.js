@@ -135,10 +135,10 @@
     });
   }
   window.addEventListener("load", () => {
-    updateScale();
+    // updateScale();
     initMobileStackReveal();
   });
-  window.addEventListener("resize", updateScale);
+  // window.addEventListener("resize", updateScale);
 })();
 /******/ })()
 ;

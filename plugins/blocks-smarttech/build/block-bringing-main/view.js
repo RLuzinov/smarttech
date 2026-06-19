@@ -30,12 +30,12 @@
     });
   }
   window.addEventListener("load", () => {
-    updateScale();
+    // updateScale();
     setMarqueeVariables();
     initLinesAnimation();
   });
   window.addEventListener("resize", () => {
-    updateScale();
+    // updateScale();
     setMarqueeVariables();
   });
 })();

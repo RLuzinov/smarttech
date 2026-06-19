@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   function updateAll() {
-    updateScale();
+    // updateScale();
     document.querySelectorAll(".profile-tabs").forEach(container => {
       positionImages(container);
     });

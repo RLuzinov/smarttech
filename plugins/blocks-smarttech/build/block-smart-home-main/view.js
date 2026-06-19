@@ -56,11 +56,11 @@
     });
   }
   window.addEventListener("load", () => {
-    updateScale();
+    // updateScale();
     initSliders();
     initVideoPlayback();
   });
-  window.addEventListener("resize", updateScale);
+  // window.addEventListener("resize", updateScale);
 })();
 /******/ })()
 ;

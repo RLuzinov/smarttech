@@ -23,7 +23,7 @@
 	}
 
 	function init() {
-		updateScale();
+		// updateScale();
 		setCSSVariables();
 	}
 
@@ -34,5 +34,5 @@
 	}
 
 	window.addEventListener("load", init);
-	window.addEventListener("resize", updateScale);
+	// window.addEventListener("resize", updateScale);
 })();

@@ -137,12 +137,12 @@
     item.appendChild(bottomLine);
   }
   window.addEventListener("load", () => {
-    updateScale();
+    // updateScale();
     initTabs();
     setTimeout(drawLines, 100);
   });
   window.addEventListener("resize", () => {
-    updateScale();
+    // updateScale();
     setTimeout(drawLines, 100);
   });
 })();
