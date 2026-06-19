@@ -18,6 +18,7 @@
 		"languageText": { "type": "string", "default": "EN" },
 		"languageUrl": { "type": "string", "default": "#popup:infoblock" },
 		"headerStyle": { "type": "string", "default": "overlay" },
+		"mobileMenuBgImage": { "type": "string", "default": "" },
 		"menuItems": {
 			"type": "array",
 			"default": [

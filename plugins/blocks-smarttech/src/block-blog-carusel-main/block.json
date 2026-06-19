@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "blocks-smarttech/block-blog-carusel-main",
+	"version": "0.1.0",
+	"title": "Block Blog Carusel for Main page",
+	"category": "smarttech",
+	"icon": "smiley",
+	"description": "Example block scaffolded with Create Block tool.",
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "Блог компании"
+		},
+		"sectionDescription": {
+			"type": "string",
+			"default": "следите за нами в соцмедиа"
+		},
+		"desktopSlides": {
+			"type": "number",
+			"default": 4
+		},
+		"mobileSlides": {
+			"type": "number",
+			"default": 1
+		},
+		"blogLink": {
+			"type": "string",
+			"default": "/blog"
+		},
+		"posts": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"supports": { "html": false },
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"editorStyle": "file:./index.css",
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js"
+}

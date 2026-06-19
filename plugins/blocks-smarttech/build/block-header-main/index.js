@@ -35,6 +35,7 @@ function Edit({
     languageText,
     languageUrl,
     headerStyle,
+    mobileMenuBgImage,
     menuItems
   } = attributes;
   const isOverlay = headerStyle === "overlay";
@@ -128,6 +129,22 @@ function Edit({
             languageUrl: value
           })
         })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Mobile menu background", "blocks-smarttech"),
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaUpload, {
+          onSelect: media => setAttributes({
+            mobileMenuBgImage: media.url
+          }),
+          allowedTypes: ["image"],
+          value: mobileMenuBgImage,
+          render: ({
+            open
+          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Button, {
+            variant: "secondary",
+            onClick: open,
+            children: mobileMenuBgImage ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Change background") : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Upload background")
+          })
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("Menu Items", "blocks-smarttech"),
         initialOpen: false,
@@ -207,7 +224,7 @@ function Edit({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
           className: "st-header__burger",
           "aria-label": "Menu",
-          "data-action": "toggle-menu",
+          "data-action": "toggle-mobile-menu",
           style: {
             color: textColor
           },
@@ -300,6 +317,7 @@ function save({
     languageText,
     languageUrl,
     headerStyle,
+    mobileMenuBgImage,
     menuItems
   } = attributes;
   const isOverlay = headerStyle === "overlay";
@@ -319,6 +337,9 @@ function save({
     className: "letter",
     children: char === " " ? "\u00A0" : char
   }, i));
+
+  // Сериализуем menuItems в JSON для использования в data-атрибуте
+  const menuData = JSON.stringify(menuItems);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     ...blockProps,
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
@@ -329,6 +350,12 @@ function save({
         style: {
           color: textColor
         },
+        "data-logo-url": activeLogo || "",
+        "data-phone-number": phoneNumber,
+        "data-language-text": languageText,
+        "data-language-url": languageUrl,
+        "data-mobile-menu-bg": mobileMenuBgImage || "",
+        "data-menu-items": menuData,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
           className: "st-header__logo",
           href: "/",
@@ -361,7 +388,7 @@ function save({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
           className: "st-header__burger",
           "aria-label": "Menu",
-          "data-action": "toggle-menu",
+          "data-action": "toggle-mobile-menu",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {})]
         })]
       })
@@ -439,7 +466,7 @@ module.exports = window["wp"]["i18n"];
   \******************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-smarttech/block-header-main","version":"0.1.0","title":"Block Header for Main page","category":"smarttech","icon":"smiley","description":"Header block with scale and letter‑by‑letter animation.","example":{},"supports":{"html":false},"attributes":{"logoUrl":{"type":"string","default":""},"logoUrlDark":{"type":"string","default":""},"phoneNumber":{"type":"string","default":"+7 (931) 111 95 03"},"languageText":{"type":"string","default":"EN"},"languageUrl":{"type":"string","default":"#popup:infoblock"},"headerStyle":{"type":"string","default":"overlay"},"menuItems":{"type":"array","default":[{"label":"Компания","url":"/o-kompanii"},{"label":"Услуги","url":"#submenu:more-uslugi-kompanii"},{"label":"Проекты","url":"#submenu:more-lokacii"},{"label":"Портфолио","url":"/portfolio"},{"label":"Блог","url":"/blog"}]}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"blocks-smarttech/block-header-main","version":"0.1.0","title":"Block Header for Main page","category":"smarttech","icon":"smiley","description":"Header block with scale and letter‑by‑letter animation.","example":{},"supports":{"html":false},"attributes":{"logoUrl":{"type":"string","default":""},"logoUrlDark":{"type":"string","default":""},"phoneNumber":{"type":"string","default":"+7 (931) 111 95 03"},"languageText":{"type":"string","default":"EN"},"languageUrl":{"type":"string","default":"#popup:infoblock"},"headerStyle":{"type":"string","default":"overlay"},"mobileMenuBgImage":{"type":"string","default":""},"menuItems":{"type":"array","default":[{"label":"Компания","url":"/o-kompanii"},{"label":"Услуги","url":"#submenu:more-uslugi-kompanii"},{"label":"Проекты","url":"#submenu:more-lokacii"},{"label":"Портфолио","url":"/portfolio"},{"label":"Блог","url":"/blog"}]}},"editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 

@@ -19,6 +19,7 @@ export default function Edit({ attributes, setAttributes }) {
 		languageText,
 		languageUrl,
 		headerStyle,
+		mobileMenuBgImage,
 		menuItems,
 	} = attributes;
 
@@ -108,6 +109,22 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(value) => setAttributes({ languageUrl: value })}
 					/>
 				</PanelBody>
+				<PanelBody title={__("Mobile menu background", "blocks-smarttech")}>
+					<MediaUpload
+						onSelect={(media) =>
+							setAttributes({ mobileMenuBgImage: media.url })
+						}
+						allowedTypes={["image"]}
+						value={mobileMenuBgImage}
+						render={({ open }) => (
+							<Button variant="secondary" onClick={open}>
+								{mobileMenuBgImage
+									? __("Change background")
+									: __("Upload background")}
+							</Button>
+						)}
+					/>
+				</PanelBody>
 				<PanelBody
 					title={__("Menu Items", "blocks-smarttech")}
 					initialOpen={false}
@@ -187,7 +204,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<button
 						className="st-header__burger"
 						aria-label="Menu"
-						data-action="toggle-menu"
+						data-action="toggle-mobile-menu"
 						style={{ color: textColor }}
 					>
 						<span></span>

@@ -8,7 +8,6 @@ import { PanelBody, TextControl, Button } from "@wordpress/components";
 
 export default function Edit({ attributes, setAttributes }) {
 	const { videoUrl, imageUrl, title, buttonText, buttonUrl } = attributes;
-
 	const blockProps = useBlockProps();
 
 	const onSelectImage = (media) => {
@@ -36,7 +35,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<MediaUpload
 						onSelect={onSelectImage}
 						allowedTypes={["image"]}
-						value={imageUrl} // Было imageUrll — опечатка исправлена
+						value={imageUrl}
 						render={({ open }) => (
 							<Button variant="secondary" onClick={open}>
 								{__("Choose Background image", "blocks-smarttech")}
@@ -64,39 +63,39 @@ export default function Edit({ attributes, setAttributes }) {
 			</InspectorControls>
 
 			<section {...blockProps}>
-				{/* Если есть видео — показываем его, иначе если есть картинка — показываем её */}
-				<div className="hero-main-media-container">
-					{videoUrl ? (
-						<video
-							className="herp-main-video"
-							loop
-							autoPlay
-							muted
-							playsInline
-							width="100%"
-							height="100%"
-						>
-							<source src={videoUrl} type="video/mp4" />
-						</video>
-					) : imageUrl ? (
-						<img
-							className="herp-main-image"
-							src={imageUrl}
-							alt=""
-							style={{ width: "100%", height: "100%", objectFit: "cover" }}
-						/>
-					) : (
-						<div className="herp-main-placeholder">
-							{__("Select background video or image", "blocks-smarttech")}
-						</div>
-					)}
-				</div>
-
-				<div className="herp-main-text-container">
-					<h1>{title}</h1>
-					<a href={buttonUrl} className="btn">
-						{buttonText}
-					</a>
+				<div className="hero-scaler" id="hero-scaler">
+					<div className="hero-main-media-container">
+						{videoUrl ? (
+							<video
+								className="hero-main-video"
+								loop
+								autoPlay
+								muted
+								playsInline
+								width="100%"
+								height="100%"
+							>
+								<source src={videoUrl} type="video/mp4" />
+							</video>
+						) : imageUrl ? (
+							<img
+								className="hero-main-image"
+								src={imageUrl}
+								alt=""
+								style={{ width: "100%", height: "100%", objectFit: "cover" }}
+							/>
+						) : (
+							<div className="hero-main-placeholder">
+								{__("Select background video or image", "blocks-smarttech")}
+							</div>
+						)}
+					</div>
+					<div className="hero-main-text-container">
+						<h1>{title}</h1>
+						<a href={buttonUrl} className="btn">
+							{buttonText}
+						</a>
+					</div>
 				</div>
 			</section>
 		</>
