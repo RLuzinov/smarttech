@@ -66,7 +66,7 @@
 .st-header__menu-list li a:hover {
   opacity: 1;
 }
-/* ============ АНИМАЦИЯ LETTERBYLETTER ============ */
+/* Анимация LETTERBYLETTER */
 .letterbyletter {
   display: inline-block;
   overflow: hidden;
@@ -125,8 +125,8 @@
 .st-header__burger span {
   display: block;
   width: 26px;
-  height: 1px;
-  background-color: currentColor;
+  height: 2px;
+  background-color: #fff;
   margin: 5px 0;
   transition: transform 0.3s ease;
 }
@@ -136,9 +136,95 @@
 .st-header--solid .st-header__container {
   height: 50px;
 }
+/* Динамическое мобильное меню (будет создано в JS) */
+.st-header__mobile-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s ease;
+}
+.st-header__mobile-popup.active {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s 0s, opacity 0.3s ease;
+}
+.st-header__mobile-popup-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.active .st-header__mobile-popup-inner {
+  transform: translateX(0);
+}
+.st-header__mobile-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.st-header__mobile-popup-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.st-header__mobile-popup-close::before, .st-header__mobile-popup-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.st-header__mobile-popup-close::after {
+  transform: rotate(-45deg);
+}
+.st-header__mobile-popup-menu {
+  flex: 1;
+}
+.st-header__mobile-popup-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.st-header__mobile-popup-menu ul li {
+  margin-bottom: 15px;
+}
+.st-header__mobile-popup-menu ul li a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+.st-header__mobile-popup-phone {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 20px;
+}
 @media screen and (max-width: 1199px) {
   .header-scaler {
     width: 100%;
+    padding-top: 15px;
   }
   .st-header__menu {
     display: none;
@@ -147,7 +233,7 @@
     display: block;
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
   }
   .st-header__phone,
@@ -176,14 +262,18 @@
   .st-header__container {
     padding: 0 10px;
   }
-  .st-header__burger {
-    right: 10px;
-  }
   .st-header__phone {
-    display: none;
+    display: none !important;
   }
   .st-header__lang {
     margin-right: 50px;
+  }
+  .st-header__burger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 65%;
+    transform: translateY(-50%);
   }
 }
 

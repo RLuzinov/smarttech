@@ -137,6 +137,52 @@ return array(
 		'style' => 'file:./style-index.css',
 		'viewScript' => 'file:./view.js'
 	),
+	'block-blog-carusel-main' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 3,
+		'name' => 'blocks-smarttech/block-blog-carusel-main',
+		'version' => '0.1.0',
+		'title' => 'Block Blog Carusel for Main page',
+		'category' => 'smarttech',
+		'icon' => 'smiley',
+		'description' => 'Example block scaffolded with Create Block tool.',
+		'attributes' => array(
+			'sectionTitle' => array(
+				'type' => 'string',
+				'default' => 'Блог компании'
+			),
+			'sectionDescription' => array(
+				'type' => 'string',
+				'default' => 'следите за нами в соцмедиа'
+			),
+			'desktopSlides' => array(
+				'type' => 'number',
+				'default' => 4
+			),
+			'mobileSlides' => array(
+				'type' => 'number',
+				'default' => 1
+			),
+			'blogLink' => array(
+				'type' => 'string',
+				'default' => '/blog'
+			),
+			'posts' => array(
+				'type' => 'array',
+				'default' => array(
+					
+				)
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'editorScript' => 'file:./index.js',
+		'style' => 'file:./style-index.css',
+		'editorStyle' => 'file:./index.css',
+		'render' => 'file:./render.php',
+		'viewScript' => 'file:./view.js'
+	),
 	'block-bringing-main' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
@@ -358,6 +404,10 @@ return array(
 			'headerStyle' => array(
 				'type' => 'string',
 				'default' => 'overlay'
+			),
+			'mobileMenuBgImage' => array(
+				'type' => 'string',
+				'default' => ''
 			),
 			'menuItems' => array(
 				'type' => 'array',

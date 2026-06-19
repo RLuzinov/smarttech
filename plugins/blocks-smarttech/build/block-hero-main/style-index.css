@@ -3,66 +3,119 @@
   \*******************************************************************************************************************************************************************************************************************************************************/
 .wp-block-blocks-smarttech-block-hero-main {
   width: 100%;
-  overflow: visible;
+  height: 100vh;
   max-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .hero-scaler {
   width: 1200px;
+  height: 100%;
   margin: 0 auto;
   transform-origin: top center;
+  position: relative;
 }
 
 .hero-main-media-container {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 1;
+  overflow: hidden;
+}
+
+.hero-main-media-container video,
+.hero-main-media-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .hero-main-text-container {
   position: absolute;
-  width: calc(100% - 60px);
-  height: 180px;
-  z-index: 2;
+  bottom: 40px;
   left: 30px;
-  bottom: 20px;
+  right: 30px;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
 }
 
+@media (max-width: 639px) {
+  .hero-main-text-container {
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 30px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
 h1 {
   font-size: 40px;
   color: #fff;
-  max-width: 764px;
+  max-width: 700px;
+  margin: 0;
+}
+
+@media (max-width: 639px) {
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px !important;
+    line-height: 1.2;
+  }
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
   font-size: 14px;
-  color: var(--dark-text);
 }
 
 .btn {
   background-color: #fff;
-  padding: 9px 71px;
+  padding: 12px 40px;
   border-radius: 50px;
-  margin-bottom: 20px;
-  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  color: #252525;
   transition: 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none !important;
 }
 
 .btn:hover {
-  background-color: var(--hover-bg);
+  background-color: #252525;
   color: #fff;
+}
+
+@media (max-width: 639px) {
+  .btn {
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .hero-scaler {
+    width: 100%;
+  }
+}
+
+@media (max-width: 639px) {
+  .hero-scaler {
+    width: 100%;
+    transform: none !important;
+  }
 }
 
 /*# sourceMappingURL=style-index.css.map*/

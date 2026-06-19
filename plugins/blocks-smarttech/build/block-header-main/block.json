@@ -36,6 +36,10 @@
       "type": "string",
       "default": "overlay"
     },
+    "mobileMenuBgImage": {
+      "type": "string",
+      "default": ""
+    },
     "menuItems": {
       "type": "array",
       "default": [

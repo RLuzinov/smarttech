@@ -340,7 +340,7 @@ function save({
                   children: Array.from({
                     length: card.iconCount || 3
                   }).map((_, i) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                    className: `expertise__card-icon${i === 1 ? " expertise__card-icon--active" : ""}`
+                    className: `expertise__card-icon${i === idx ? " expertise__card-icon--active" : ""}`
                   }, i))
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
                   className: "expertise__card-title",
@@ -379,7 +379,7 @@ function save({
                     children: Array.from({
                       length: card.iconCount || 3
                     }).map((_, i) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-                      className: `expertise__card-icon${i === 1 ? " expertise__card-icon--active" : ""}`
+                      className: `expertise__card-icon${i === idx ? " expertise__card-icon--active" : ""}`
                     }, i))
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h4", {
                     className: "expertise__card-title",

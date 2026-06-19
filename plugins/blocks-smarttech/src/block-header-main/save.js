@@ -8,6 +8,7 @@ export default function save({ attributes }) {
 		languageText,
 		languageUrl,
 		headerStyle,
+		mobileMenuBgImage,
 		menuItems,
 	} = attributes;
 
@@ -33,10 +34,22 @@ export default function save({ attributes }) {
 			</span>
 		));
 
+	// Сериализуем menuItems в JSON для использования в data-атрибуте
+	const menuData = JSON.stringify(menuItems);
+
 	return (
 		<div {...blockProps}>
 			<div className="header-scaler" id="header-scaler">
-				<div className="st-header__container" style={{ color: textColor }}>
+				<div
+					className="st-header__container"
+					style={{ color: textColor }}
+					data-logo-url={activeLogo || ""}
+					data-phone-number={phoneNumber}
+					data-language-text={languageText}
+					data-language-url={languageUrl}
+					data-mobile-menu-bg={mobileMenuBgImage || ""}
+					data-menu-items={menuData}
+				>
 					<a className="st-header__logo" href="/">
 						{activeLogo ? (
 							<img src={activeLogo} alt="Logo" />
@@ -65,7 +78,7 @@ export default function save({ attributes }) {
 					<button
 						className="st-header__burger"
 						aria-label="Menu"
-						data-action="toggle-menu"
+						data-action="toggle-mobile-menu"
 					>
 						<span></span>
 						<span></span>

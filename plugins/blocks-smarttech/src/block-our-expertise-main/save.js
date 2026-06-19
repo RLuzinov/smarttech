@@ -50,7 +50,9 @@ export default function save({ attributes }) {
 															<span
 																key={i}
 																className={`expertise__card-icon${
-																	i === 1 ? " expertise__card-icon--active" : ""
+																	i === idx
+																		? " expertise__card-icon--active"
+																		: ""
 																}`}
 															/>
 														),
@@ -96,7 +98,7 @@ export default function save({ attributes }) {
 																<span
 																	key={i}
 																	className={`expertise__card-icon${
-																		i === 1
+																		i === idx
 																			? " expertise__card-icon--active"
 																			: ""
 																	}`}
